@@ -15,7 +15,7 @@ We will also need to use docker-compose to spin-up the environment.
 
 To get started, execute the following commands:
 
-```
+```bash
 cd ~
 git clone https://github.com/Jahia/provisioning-examples.git
 cd provisioning-examples/02-digitall-mariadb
