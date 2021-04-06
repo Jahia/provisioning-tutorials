@@ -1,2 +1,3 @@
-- installAndStartBundle: "mvn:org.jahia.modules/personal-api-tokens/1.0.0"
+- installBundle: "mvn:org.jahia.modules/personal-api-tokens/1.0.0"
+  autoStart: true
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/01-personal-api-tokens/create-token.groovy"
