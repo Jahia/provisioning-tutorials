@@ -1,4 +1,5 @@
 - installBundle: "mvn:org.jahia.modules/personal-api-tokens/1.0.0"
   autoStart: true
-- karafCommand: "shell:exec sleep 15"   
+- karafCommand: "shell:exec sleep 15"
+  timeout: 30000
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/01-personal-api-tokens/create-token.groovy"
