@@ -12,7 +12,9 @@ Note that these examples are provided as a proof of principle, you should never,
 
 ## Instructions
 
-Starting this example is very straight-forward and has no external dependencies (aside from content of this repository), it can be simply executed using `docker run`
+Starting this example is very straight-forward and has no external dependencies (aside from content of this repository), it can be simply started using `docker run`. 
+
+As with most of the examples in this repository, we're going to directly reference the provisioning script by its URL. But it could also be located on the Jahia's filesystem (or mounted volume).
 
 ```bash
 docker run -e EXECUTE_PROVISIONING_SCRIPT="https://raw.githubusercontent.com/Jahia/provisioning-examples/main/01-personal-api-tokens/provisioning.yaml" -p 8080:8080 jahia/jahia-ee:8.0.3.0
