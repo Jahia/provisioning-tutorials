@@ -12,6 +12,8 @@ Primariraly aimed at containerized environments (Docker) this API is not tied to
 
 Each folder in this repository contains all the necessary elements to start a Jahia environment following different use cases, these examples serves as proof-of-principles and are not meant at being used "as-is" for production environment. Instead they contain useful piece of information that can be later adapted to your use case.
 
+Examples are sorted by complexity, with 01 being the most simple example.
+
 ## Documentation
 
 The provisioning API is documented on the Academy [ADD LINK ONCE PUBLISHED]
