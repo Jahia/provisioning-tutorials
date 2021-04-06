@@ -1,1 +1,1 @@
-
+- installBundle: "mvn:org.jahia.modules/personal-api-tokens/1.0.0"
