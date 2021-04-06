@@ -22,3 +22,6 @@ cd provisioning-examples/02-digitall-mariadb
 docker-compose up
 ```
 
+You will first see the MariaDB starting up, Jahia will then create the necessary tables and continue with its startup. 
+
+At the end of the startup, digitall will be available on Jahia at http://localhost:8080
