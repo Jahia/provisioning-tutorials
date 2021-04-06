@@ -1,0 +1,43 @@
+# Add Jahia Store as maven repository
+- addMavenRepository: "https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore"
+
+# Install Digitall
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/calendar/3.1.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/news/3.1.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/dx-base-demo-components/2.1.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/dx-base-demo-templates/3.1.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/digitall/2.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/bookmarks/3.1.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/press/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/bootstrap3-core/4.1.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/socialsharing/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/event/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/googleAnalytics/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/faq/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/font-awesome/6.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/topstories/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/dx-base-demo-core/2.2.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/person/3.1.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/rating/3.2.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/bootstrap3-components/4.1.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/rss/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/article/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/contact/3.0.0'
+- installOrUpgradeBundle: 'mvn:org.jahia.modules/location/3.0.0'
+
+# Install Forms
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-snippets-extension/3.0.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-nocss-theme/2.0.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/font-awesome/6.0.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-prefill/2.0.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-core/3.2.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-extended-inputs/2.0.0'
+
+# Install Augmented-Search
+- installAndStartBundle: 'mvn:org.jahia.modules/database-connector/1.3.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/elasticsearch-connector-7/7.4.3'
+- installAndStartBundle: 'mvn:org.jahia.modules/augmented-search/3.1.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/augmented-search-ui/3.0.1'
+
+- import: "jar:mvn:org.jahia.modules/digitall/2.0.0/zip/import!/users.zip"
+- importSite: "jar:mvn:org.jahia.modules/digitall/2.0.0/zip/import!/Digitall.zip"
