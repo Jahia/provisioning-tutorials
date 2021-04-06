@@ -1,8 +1,8 @@
 # Personal API Tokens example
 
-In this example we're going to start:
+In this example we're going to:
 
-* Jahia Enterprise, single node and use a local DerbyDB
+* start Jahia Enterprise, single node and use a local DerbyDB
 * Install Personal API Tokens
 * Create an API token attached to root
 
