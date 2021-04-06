@@ -10,3 +10,13 @@ Note that these examples are provided as a proof of principle, you should never,
 
 ## Instructions
 
+Starting this example is very straight-forward and has no external dependencies (aside from content of this repository), it can be simply executed using `docker run`
+
+```bash
+docker run -e EXECUTE_PROVISIONING_SCRIPT="https://raw.githubusercontent.com/Jahia/provisioning-examples/main/01-personal-api-tokens/provisioning.yaml" -p 8080:8080 jahia/jahia-ee:8.0.3.0
+```
+
+The command above expose a running Jahia on http://localhost:8080 (watch-out if this port is already used on your machine).
+
+You can verify that the token was successefully installed by running the following curl:
+
