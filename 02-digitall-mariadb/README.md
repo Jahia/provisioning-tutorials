@@ -17,7 +17,7 @@ To get started, execute the following commands:
 
 ```bash
 cd ~
-git clone https://github.com/Jahia/provisioning-examples.git
+git clone git@github.com:Jahia/provisioning-examples.git
 cd provisioning-examples/02-digitall-mariadb
 docker-compose up
 ```
