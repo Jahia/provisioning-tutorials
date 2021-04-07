@@ -33,6 +33,10 @@ These tutorials expose set ports (such as 8080), you will need to make sure thes
 
 __Note__: Please ensure that your Docker installation allows allocating up to 4GB of memory to a container. For MacOS users, in Docker go to Preferences>Advanced and set the memory limit to 4GB or more instead of the default 2GB.
 
+## Get started
+
+Ready to get started, if you're new to Jahia with Docker, you should being with the [first tutorial](./00-start-jahia/).
+
 ## Documentation
 
 The provisioning API is documented on the Academy [ADD LINK ONCE PUBLISHED]
