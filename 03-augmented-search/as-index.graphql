@@ -1,7 +1,7 @@
 mutation {
     admin {
         search {
-            startIndex(siteKeys: []) {
+            startIndex(siteKeys: ["digitall"]) {
                  jobs {
                      id
                  }
