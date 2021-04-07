@@ -20,5 +20,24 @@ cd provisioning-examples/03-augmented-search
 docker-compose up
 ```
 
-At the end of the startup, digitall will be available on Jahia at http://localhost:8080
+While the elasticsearch cluster is starting, you will first see the MariaDB container booting up and Jahia creating the necessary tables and continue with its startup. 
 
+## After startup
+
+At the end of startup (and once indexing is complete), you'll be able to perform your first search using our GraphQL API:
+
+__Query__:
+```bash
+
+```
+
+__Response__:
+```bash
+
+```
+
+You will also be able to see our demo search UI when visiting Digitall's home page at http://localhost:8080.
+
+## Next
+
+In the next tutorial, we're going to add jExperience and forms to the mix [click here](../04-jexperience-forms/).
