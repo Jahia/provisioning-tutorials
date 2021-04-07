@@ -2,7 +2,7 @@
     <img src="https://www.jahia.com/modules/jahiacom-templates/images/jahia-3x.png" alt="Jahia logo" title="Jahia" align="right" height="60" />
 </a>
 
-# Provisioning Examples
+# Provisioning Tutorials
 
 Starting with version 8.0.3.0, Jahia comes with a provisioning API to facilitate the orchestration of Jahia environments. Its main objective is to automate the startup of complex environment beginning with our release artifcats, going all the way to "production", without requiring manual actions nor direct filesystem access to the Jahia environment.
 
