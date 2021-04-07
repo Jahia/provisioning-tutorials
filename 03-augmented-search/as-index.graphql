@@ -1,0 +1,11 @@
+mutation {
+    admin {
+        search {
+            startIndex(siteKeys: []) {
+                 jobs {
+                     id
+                 }
+             }
+        }
+    }
+}
