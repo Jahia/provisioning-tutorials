@@ -80,4 +80,4 @@ __PS__: Since we're not searching on a particular search term, the exact result 
 
 ## Next
 
-In the next tutorial, we're going to add jExperience and forms to the mix [click here](../04-jexperience-forms/).
+In the next tutorial, we're going to add jExperience and forms to the mix [click here](../04-jexperience/).
