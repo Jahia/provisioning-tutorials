@@ -36,7 +36,7 @@ services:
   jcustomer:
     image: jahia/jcustomer:1.5.4    
     environment:
-      - unomi_env_var_UNOMI_ELASTICSEARCH_ADDRESSES=elasticsearch:9300
+      - unomi_env_var_UNOMI_ELASTICSEARCH_ADDRESSES=elasticsearch:9200
       - unomi_env_var_UNOMI_ELASTICSEARCH_CLUSTERNAME=jahia-es-cluster
       - unomi_env_var_UNOMI_CLUSTER_PUBLIC_ADDRESS=http://localhost:8181
       - unomi_env_var_UNOMI_CLUSTER_INTERNAL_ADDRESS=https://jcustomer:9443
