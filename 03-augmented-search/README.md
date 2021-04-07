@@ -24,7 +24,13 @@ While the elasticsearch cluster is starting, you will first see the MariaDB cont
 
 ## After startup
 
-At the end of startup (and once indexing is complete), you'll be able to perform your first search using our GraphQL API:
+At the end of startup, open a browser to Digitall's home page at http://localhost:8080.
+
+<img width="800" alt="Augmented Search and Digitall" src="https://user-images.githubusercontent.com/5667028/113905349-0dae7d00-97a1-11eb-9121-f68379f41bd1.png">
+
+### Fiddling with GraphQL API 
+
+You can also play with our GraphQL API: 
 
 __Query__: As an authenticated user (root), fetch 2 hits across all documents (no search terms) in the __EDIT__ workspace
 ```bash
