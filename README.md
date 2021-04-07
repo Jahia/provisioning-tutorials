@@ -16,6 +16,7 @@ These examples serves as proof-of-principles and are not meant at being used "as
 
 | Tutorial | Description |
 | --- | --- |
+| [00-start-jahia](./00-start-jahia/) | Start Jahia Enterprise with Docker |
 | [01-personal-api-tokens](./01-personal-api-tokens/) | Using a local DerbyBD database, installs the `Personal API Tokens` module and creates a token |
 | [02-digitall-mariadb](./02-digitall-mariadb) | Using MariaDB as its database, installs Digitall |
 | [03-augmented-search](./03-augmented-search) | Adds an Elasticsearch single-node cluster, installs and configures Augmented-Search for Digitall  |
