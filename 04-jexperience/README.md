@@ -19,6 +19,7 @@ This tutorial is a bit more combursome when compared to the previous ones as it 
 
 Once done, update the variable `MAXMIND_KEY` in the `.env` file fetched earlier.
 
+You might have noticed that we're introducing another layer of flexibility with the `.env` file, which you can use to easily modify the images (and their versions) used for the run. 
 
 ## After startup
 
