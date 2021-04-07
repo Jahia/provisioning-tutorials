@@ -61,11 +61,14 @@
 
 # Configure Augmented Search and digitall
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-config.graphql"
-# Trigger a full indexation
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
 
 # Install our Augmented-Search sample UI and enable it on Digitall
 - installAndStartBundle: 'mvn:org.jahia.modules/augmented-search-ui/3.0.1'
 - startBundle: 'augmented-search-ui/3.0.1'
 - enable: "augmented-search-ui"
   site: "digitall"
+
+# Trigger a full indexation
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
+
+
