@@ -15,7 +15,9 @@ git clone git@github.com:Jahia/provisioning-tutorials.git
 cd provisioning-examples/04-jexperienec
 ```
 
-This tutorial is a bit more combursome when compared to the previous ones as it requires you to obtain a [GeoLite license key from maxmind]( https://dev.maxmind.com/geoip/geoip2/geolite2/)
+This tutorial is a bit more combursome when compared to the previous ones as it requires you to obtain a [GeoLite license key from maxmind]( https://dev.maxmind.com/geoip/geoip2/geolite2/). This is used by Unomi to associate IP addresses with their geolocation.
+
+
 
 
 ## After startup
