@@ -17,6 +17,7 @@
 - installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
 - startBundle: 'jexperience/2.0.0'
 
+# Configure the jExperience connection to jCustomer
 - karafCommand: "config:edit org.jahia.modules.jexperience.settings-global.cfg"
 - karafCommand: "config:property-set jexperience.jCustomerURL https://jcustomer:9443"
 - karafCommand: "config:property-set jexperience.jCustomerPassword karaf"
