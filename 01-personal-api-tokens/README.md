@@ -22,7 +22,33 @@ docker run -e EXECUTE_PROVISIONING_SCRIPT="https://raw.githubusercontent.com/Jah
 
 The command above expose a running Jahia on http://localhost:8080 (watch-out if this port is already used on your machine).
 
-You can verify that the token was successefully installed by running the following curl:
+You can verify that the token was successefully installed and is usable by running the following curl:
+```bash
+curl --request POST \
+  --url http://localhost:8080/modules/graphql \
+  --header 'Content-Type: application/json' \
+  --header 'authorization: APIToken THIS-TOKEN-DOES-NOT-EXIST' \
+  --data '{"query":"query {\n  currentUser {\n    name\n  }\n}"}'
+```
+
+You should receive the following:
+```
+{"data":{"currentUser":{"name":"guest"}}}
+```
+
+You can also check the response when sending an invalid token (you will be recognized as "guest")
+```bash
+curl --request POST \
+  --url http://localhost:8080/modules/graphql \
+  --header 'Content-Type: application/json' \
+  --header 'authorization: APIToken THIS-TOKEN-DOES-NOT-EXIST' \
+  --data '{"query":"query {\n  currentUser {\n    name\n  }\n}"}'
+```
+
+You should receive the following:
+```
+{"data":{"currentUser":{"name":"guest"}}}
+```
 
 ## Next
 
