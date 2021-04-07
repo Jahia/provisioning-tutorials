@@ -1,0 +1,9 @@
+# Configure the jExperience connection to jCustomer
+- karafCommand: "config:edit org.jahia.modules.jexperience.settings-global.cfg"
+- karafCommand: "config:property-set jexperience.jCustomerURL https://jcustomer:9443"
+- karafCommand: "config:property-set jexperience.jCustomerPassword karaf"
+- karafCommand: "config:property-set jexperience.jCustomerUsername karaf"
+- karafCommand: "config:property-set jexperience.jCustomerTrustAllCertificates true"
+- karafCommand: "config:property-set jexperience.jCustomerUsePublicAddressesForAdmin false"
+- karafCommand: "config:property-set jexperience.jCustomerKey 670c26d1cc413346c3b2fd9ce65dab41"
+- karafCommand: "config:update"
