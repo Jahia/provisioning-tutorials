@@ -9,8 +9,8 @@
 # - karafCommand: "config:update"
 # - installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
 # - startBundle: 'jexperience/2.0.0'
-- editConfiguration: "org.jahia.modules.jexperience.settings-global"
-  configIdentifier: "id1"
+- editConfiguration: "org.jahia.modules.jexperience"
+  configIdentifier: "settings-global"
   properties: 
     jexperience.jCustomerURL: "https://jcustomer:9443"
     jexperience.jCustomerUsername: "karaf"
