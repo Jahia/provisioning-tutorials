@@ -1,6 +1,7 @@
 # Installing Personal API Tokens
 - installBundle: "mvn:org.jahia.modules/personal-api-tokens/1.0.0"
   autoStart: true
+- startBundle: "personal-api-tokens/1.0.0"
 
 # Installing the modules needed by Digitall
 - installOrUpgradeBundle: 'mvn:org.jahia.modules/calendar/3.1.0'
