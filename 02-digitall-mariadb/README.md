@@ -1,6 +1,6 @@
 # Digitall & MariaDB example
 
-In this example we're going to:
+Building on top of the [previous tutorial](../01-personal-api-tokens), we're going to:
 
 * start Jahia Enterprise, single node
 * start a MariaDB container (empty)
