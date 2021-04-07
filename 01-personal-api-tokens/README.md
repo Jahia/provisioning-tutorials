@@ -1,4 +1,4 @@
-# Personal API Tokens example
+# Personal API Tokens tutorial
 
 In this example we're going to:
 
