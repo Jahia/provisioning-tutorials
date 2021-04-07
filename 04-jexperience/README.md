@@ -13,10 +13,10 @@ To get started, execute the following commands:
 cd ~
 git clone git@github.com:Jahia/provisioning-tutorials.git
 cd provisioning-examples/04-jexperienec
-docker-compose up
 ```
 
-While the elasticsearch cluster is starting, you will first see the MariaDB container booting up and Jahia creating the necessary tables and continue with its startup. 
+This tutorial is a bit more combursome when compared to the previous ones as it requires you to obtain a [GeoLite license key from maxmind]( https://dev.maxmind.com/geoip/geoip2/geolite2/)
+
 
 ## After startup
 
