@@ -18,7 +18,7 @@ Each folder in this repository contains all the necessary elements to start a Ja
 | 02-digitall-mariadb | Using MariaDB as its database, installs Digitall |
 | 03-augmented-search | Adds an Elasticsearch single-node cluster, installs and configures Augmented-Search for Digitall  |
 | 04-jexperience | Installs and configures jExperience |
-| 05-cluster | Spin-up a 3 nodes Jahia cluster |
+| 05-cluster | Spins-up a 3 nodes Jahia cluster |
 
 
 ## Documentation
