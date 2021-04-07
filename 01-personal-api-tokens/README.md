@@ -22,6 +22,8 @@ docker run -e EXECUTE_PROVISIONING_SCRIPT="https://raw.githubusercontent.com/Jah
 
 The command above expose a running Jahia on http://localhost:8080 (watch-out if this port is already used on your machine).
 
+## After startup
+
 You can verify that the token was successefully installed and is usable by running the following curl:
 ```bash
 curl --request POST \
