@@ -24,3 +24,6 @@ The command above expose a running Jahia on http://localhost:8080 (watch-out if 
 
 You can verify that the token was successefully installed by running the following curl:
 
+## Next
+
+In the next tutorial, we're going to switch to a MariaDB database and import digitall, [click here](../02-digitall-mariadb/).
