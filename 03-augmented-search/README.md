@@ -46,14 +46,13 @@ __Response__:
 {"data":{"search":{"results":{"hits":[{"displayableName":"News Entry"},{"displayableName":"History"}]}}}}
 ```
 
-You might notice that we searched in the EDIT workspace, which is only accessible to authenticated user, look at what happens if you run the same query with an invalid token:
+You might notice that we searched in the EDIT workspace, which is only accessible to an authenticated user, look at what happens if you run the same query without providing a token:
 
 __Query__: As guest, fetch 2 hits across all documents (no search terms) in the __EDIT__ workspace
 ```bash
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
-  --header 'authorization: APIToken I-DO-NOT-EXIST' \
   --data '{"query":"query {\n  search(q: \"\", workspace: EDIT) {\n    results(size: 2) {\n      hits {\n        displayableName\n      }\n    }\n  }\n}"}'
 ```
 
@@ -69,7 +68,6 @@ __Query__: As guest, fetch 2 hits across all documents (no search terms) in the 
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
-  --header 'authorization: APIToken I-DO-NOT-EXIST' \
   --data '{"query":"query {\n  search(q: \"\", workspace: LIVE) {\n    results(size: 2) {\n      hits {\n        displayableName\n      }\n    }\n  }\n}"}'
 ```
 
@@ -78,7 +76,7 @@ __Response__:
 {"data":{"search":{"results":{"hits":[{"displayableName":"Press Releases Entry"},{"displayableName":"Events"}]}}}}
 ```
 
-You will also be able to see our demo search UI when visiting Digitall's home page at http://localhost:8080.
+__PS__: Since we're not searching on a particular search term, the exact result order between the two workspaces might differ (as they do in the example above).
 
 ## Next
 
