@@ -1,4 +1,4 @@
-# Augmented-Search example
+# Augmented-Search tutorial
 
 Building on top of the [previous tutorial](../02-digitall-mariadb), we're going to:
 
