@@ -27,6 +27,8 @@ These examples serves as proof-of-principles and are not meant at being used "as
 
 In order to follow these tutorials you will need the Docker Engine installed on your machine. 
 
+These tutorials expose set ports (such as 8080), you will need to make sure these do not conflict with other resources you might have running on your machine.
+
 __Note__: Please ensure that your Docker installation allows allocating up to 4GB of memory to a container. For MacOS users, in Docker go to Preferences>Advanced and set the memory limit to 4GB or more instead of the default 2GB.
 
 ## Documentation
