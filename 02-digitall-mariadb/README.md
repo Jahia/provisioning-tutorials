@@ -1,4 +1,4 @@
-# Digitall & MariaDB example
+# Digitall & MariaDB tutorial
 
 Building on top of the [previous tutorial](../01-personal-api-tokens), we're going to:
 
