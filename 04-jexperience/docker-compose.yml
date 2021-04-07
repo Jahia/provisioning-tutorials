@@ -4,7 +4,8 @@ services:
     image: library/mariadb:10-focal
     mem_limit: 2gb
     networks:
-      - stack
+      stack:
+        ipv4_address: 172.16.1.10
     command: --max_allowed_packet=134217728 --transaction-isolation=READ-UNCOMMITTED --innodb-lock-wait-timeout=10
     environment:
       MYSQL_ROOT_PASSWORD: mariadbP@55
@@ -13,16 +14,19 @@ services:
       MYSQL_PASSWORD: jahia
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.4.2
-    environment:
-      - discovery.type=single-node
-    ports:
-      - 9200:9200
     networks:
       stack:
+        ipv4_address: 172.16.1.20    
+    environment:
+      - discovery.type=single-node
+      - cluster.name=jahia-es-cluster      
+    ports:
+      - 9200:9200     
   jahia:
     image: jahia/jahia-ee:8.0.3.0
     networks:
-      - stack
+      stack:
+        ipv4_address: 172.16.1.30
     depends_on:
       - mariadb
     ports:
@@ -38,5 +42,30 @@ services:
       PROCESSING_SERVER: 'true'
       MAX_RAM_PERCENTAGE: 95
       EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/04-jexperience/provisioning.yaml'
+  jcustomer:
+    image: jahia/jcustomer:1.5.4
+    networks:
+      stack:
+        ipv4_address: 172.16.1.40    
+    environment:
+      - UNOMI_ELASTICSEARCH_ADDRESSES=elasticsearch:9300
+      - UNOMI_ELASTICSEARCH_CLUSTERNAME=jahia-es-cluster
+      - UNOMI_CLUSTER_PUBLIC_ADDRESS=http://localhost:8181
+      - UNOMI_CLUSTER_INTERNAL_ADDRESS=https://jcustomer:9443
+      - JAVA_MAX_MEM=2G
+      - UNOMI_ROOT_PASSWORD=root1234
+      - UNOMI_HAZELCAST_TCPIP_MEMBERS=jcustomer
+      - MAXMIND_KEY=XXXXXXXXXXXXXXXXX
+    ports:
+      - 9443:9443
+      - 8181:8181
+      - 8102:8102
+    depends_on:
+      - elasticsearch
 networks:
   stack:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.1.0/24
