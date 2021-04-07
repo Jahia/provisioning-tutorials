@@ -1,4 +1,5 @@
 # Start with the provisioning script from Tutorial #3
+- include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/02-digitall-mariadb/provisioning.yaml
 - include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/provisioning.yaml
 
 # Install Forms
