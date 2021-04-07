@@ -26,6 +26,10 @@ You will first see the MariaDB starting up, Jahia will then create the necessary
 
 At the end of the startup, digitall will be available on Jahia at http://localhost:8080
 
+## After startup
+
+You will have a fully fonctional Digitall site when visiting http://localhost:8080
+
 ## Next
 
 In the next tutorial, we're going to add an Elasticsearch single-node cluster, install and configure Augmented Search and enable it on Digitall, [click here](../03-augmented-search/).
