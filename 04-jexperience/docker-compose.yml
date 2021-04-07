@@ -36,13 +36,13 @@ services:
   jcustomer:
     image: jahia/jcustomer:1.5.4    
     environment:
-      - UNOMI_ELASTICSEARCH_ADDRESSES=elasticsearch:9300
-      - UNOMI_ELASTICSEARCH_CLUSTERNAME=jahia-es-cluster
-      - UNOMI_CLUSTER_PUBLIC_ADDRESS=http://localhost:8181
-      - UNOMI_CLUSTER_INTERNAL_ADDRESS=https://jcustomer:9443
-      - JAVA_MAX_MEM=2G
-      - UNOMI_ROOT_PASSWORD=root1234
-      - UNOMI_HAZELCAST_TCPIP_MEMBERS=jcustomer
+      - unomi_env_var_UNOMI_ELASTICSEARCH_ADDRESSES=elasticsearch:9300
+      - unomi_env_var_UNOMI_ELASTICSEARCH_CLUSTERNAME=jahia-es-cluster
+      - unomi_env_var_UNOMI_CLUSTER_PUBLIC_ADDRESS=http://localhost:8181
+      - unomi_env_var_UNOMI_CLUSTER_INTERNAL_ADDRESS=https://jcustomer:9443
+      - unomi_env_var_JAVA_MAX_MEM=2G
+      - unomi_env_var_UNOMI_ROOT_PASSWORD=root1234
+      - unomi_env_var_UNOMI_HAZELCAST_TCPIP_MEMBERS=jcustomer
       - MAXMIND_KEY=${MAXMIND_KEY}
     ports:
       - 9443:9443
