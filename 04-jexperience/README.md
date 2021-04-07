@@ -19,12 +19,19 @@ This tutorial is a bit more combursome when compared to the previous ones as it 
 
 Once done, update the variable `MAXMIND_KEY` in the `.env` file fetched earlier.
 
-You might have noticed that we're introducing another layer of flexibility with the `.env` file, which you can use to easily modify the images (and their versions) used for the run. 
+```bash
+MAXMIND_KEY=CHANGEME
+JAHIA_IMAGE=jahia/jahia-ee:8.0.3.0
+UNOMI_IMAGE=jahia/jcustomer:1.5.4
+ELASTICSEARCH_IMAGE=docker.elastic.co/elasticsearch/elasticsearch:7.4.2
+MARIADB_IMAGE=library/mariadb:10-focal
+```
+
+You might have noticed that we're introducing another layer of flexibility with the `.env` file. You can use it to easily modify the docker images (and their versions) used for the environment. 
 
 ## After startup
 
 At the end of startup (give it a minute or two), open a browser to Digitall's home page at http://localhost:8080.
-
 
 ## Next
 
