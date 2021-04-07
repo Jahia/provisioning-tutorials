@@ -27,13 +27,13 @@ You can verify that the token was successefully installed and is usable by runni
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
-  --header 'authorization: APIToken THIS-TOKEN-DOES-NOT-EXIST' \
+  --header 'authorization: APIToken kgHNm05iQV61I+GY3X5HVr13i866HAAsyou8G+eGubk=' \
   --data '{"query":"query {\n  currentUser {\n    name\n  }\n}"}'
 ```
 
 You should receive the following:
 ```
-{"data":{"currentUser":{"name":"guest"}}}
+{"data":{"currentUser":{"name":"root"}}}
 ```
 
 You can also check the response when sending an invalid token (you will be recognized as "guest")
