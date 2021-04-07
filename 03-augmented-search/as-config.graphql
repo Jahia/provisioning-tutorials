@@ -1,0 +1,13 @@
+mutation {
+    admin {
+        search {
+            setDbConnection(connectionId: "augmented-search-conn")
+            addSite(siteKey: "digitall")
+            startIndex(siteKeys: []) {
+                 jobs {
+                     id
+                 }
+             }
+        }
+    }
+}
