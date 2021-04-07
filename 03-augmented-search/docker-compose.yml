@@ -37,6 +37,6 @@ services:
       OPERATING_MODE: development
       PROCESSING_SERVER: 'true'
       MAX_RAM_PERCENTAGE: 95
-      EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/Jahia/provisioning-examples/main/03-augmented-search/provisioning.yaml'
+      EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/provisioning.yaml'
 networks:
   stack:
