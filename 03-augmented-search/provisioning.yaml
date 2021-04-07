@@ -25,11 +25,11 @@
 - enable: "augmented-search-ui"
   site: "digitall"
 
-# Trigger a full indexation
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
-
 # Add Augmented-Search UI module below the slider in Digitall home
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/add-search-ui.graphql"
 
 # Publish Augmented-Search UI
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/publish-search-ui.graphql"
+
+# Trigger a full indexation
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
