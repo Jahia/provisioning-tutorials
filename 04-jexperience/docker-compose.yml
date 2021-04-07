@@ -3,9 +3,6 @@ services:
   mariadb:
     image: ${MARIADB_IMAGE}
     mem_limit: 2gb
-    networks:
-      stack:
-        ipv4_address: 172.16.1.10
     command: --max_allowed_packet=134217728 --transaction-isolation=READ-UNCOMMITTED --innodb-lock-wait-timeout=10
     environment:
       MYSQL_ROOT_PASSWORD: mariadbP@55
@@ -13,10 +10,7 @@ services:
       MYSQL_USER: jahia
       MYSQL_PASSWORD: jahia
   elasticsearch:
-    image: ${ELASTICSEARCH_IMAGE}
-    networks:
-      stack:
-        ipv4_address: 172.16.1.20    
+    image: ${ELASTICSEARCH_IMAGE}   
     environment:
       - discovery.type=single-node
       - cluster.name=jahia-es-cluster      
@@ -24,9 +18,6 @@ services:
       - 9200:9200     
   jahia:
     image: ${JAHIA_IMAGE}
-    networks:
-      stack:
-        ipv4_address: 172.16.1.30
     depends_on:
       - mariadb
     ports:
@@ -43,10 +34,7 @@ services:
       MAX_RAM_PERCENTAGE: 95
       EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/04-jexperience/provisioning.yaml'
   jcustomer:
-    image: jahia/jcustomer:1.5.4
-    networks:
-      stack:
-        ipv4_address: 172.16.1.40    
+    image: jahia/jcustomer:1.5.4    
     environment:
       - UNOMI_ELASTICSEARCH_ADDRESSES=elasticsearch:9300
       - UNOMI_ELASTICSEARCH_CLUSTERNAME=jahia-es-cluster
@@ -64,8 +52,3 @@ services:
       - elasticsearch
 networks:
   stack:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.16.1.0/24
