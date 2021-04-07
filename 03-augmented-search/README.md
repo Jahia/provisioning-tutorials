@@ -17,7 +17,7 @@ To get started, execute the following commands:
 cd ~
 git clone git@github.com:Jahia/provisioning-tutorials.git
 cd provisioning-tutorials/03-augmented-search
-docker-compose up
+docker-compose up --renew-anon
 ```
 
 While the elasticsearch cluster is starting, you will first see the MariaDB container booting up and Jahia creating the necessary tables and continue with its startup. 
