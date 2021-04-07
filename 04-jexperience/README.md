@@ -29,6 +29,11 @@ MARIADB_IMAGE=library/mariadb:10-focal
 
 You might have noticed that we're introducing another layer of flexibility with the `.env` file. You can use it to easily modify the docker images (and their versions) used for the environment. 
 
+We can now start the environment:
+```bash
+docker-compose up --renew-anon
+```
+
 ## After startup
 
 At the end of startup (give it a minute or two), open a browser to Digitall's home page at http://localhost:8080.
