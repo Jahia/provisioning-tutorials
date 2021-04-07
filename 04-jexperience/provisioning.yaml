@@ -71,27 +71,27 @@
 - enable: "augmented-search-ui"
   site: "digitall"
 
-# Trigger a full indexation
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
-
 # Add Augmented-Search UI module below the slider in Digitall home
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/add-search-ui.graphql"
 
 # Publish Augmented-Search UI
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/publish-search-ui.graphql"
 
-# # Install Forms
-#  - installAndStartBundle: 'mvn:org.jahia.modules/forms-snippets-extension/3.0.0'
-#  - startBundle: 'forms-snippets-extension/3.0.0'
-#  - installAndStartBundle: 'mvn:org.jahia.modules/forms-nocss-theme/2.0.0'
-#  - startBundle: 'forms-nocss-theme/2.0.0'
-#  - installAndStartBundle: 'mvn:org.jahia.modules/forms-prefill/2.0.0'
-#  - startBundle: 'forms-prefill/2.0.0'
-#  - installAndStartBundle: 'mvn:org.jahia.modules/forms-core/3.2.0'
-#  - startBundle: 'forms-core/3.2.0'
-#  - installAndStartBundle: 'mvn:org.jahia.modules/forms-extended-inputs/2.0.0'
-#  - startBundle: 'forms-extended-inputs/2.0.0'
+# Trigger a full indexation
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
 
-# # Install jExperience
-#  - installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
-#  - startBundle: 'jexperience/2.0.0'
+# Install Forms
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-snippets-extension/3.0.0'
+- startBundle: 'forms-snippets-extension/3.0.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-nocss-theme/2.0.0'
+- startBundle: 'forms-nocss-theme/2.0.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-prefill/2.0.0'
+- startBundle: 'forms-prefill/2.0.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-core/3.2.0'
+- startBundle: 'forms-core/3.2.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/forms-extended-inputs/2.0.0'
+- startBundle: 'forms-extended-inputs/2.0.0'
+
+# Install jExperience
+- installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
+- startBundle: 'jexperience/2.0.0'
