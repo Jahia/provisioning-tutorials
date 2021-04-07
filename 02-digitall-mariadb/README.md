@@ -3,7 +3,7 @@
 Building on top of the [previous tutorial](../01-personal-api-tokens), we're going to:
 
 * start Jahia Enterprise, single node
-* start a MariaDB container (empty)
+* start a MariaDB container with an empty database
 * Link MariaDB and Jahia, then initialize the database
 * Install Digitall
 
