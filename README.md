@@ -17,11 +17,11 @@ These examples serve as proof-of-principles and are not meant at being used "as-
 | Tutorial | Description |
 | --- | --- |
 | [00-start-jahia](./00-start-jahia/) | Start Jahia Enterprise with Docker |
-| [01-personal-api-tokens](./01-personal-api-tokens/) | Using a local DerbyBD database, installs the `Personal API Tokens` module and creates a token |
-| [02-digitall-mariadb](./02-digitall-mariadb) | Using MariaDB as its database, installs Digitall |
-| [03-augmented-search](./03-augmented-search) | Adds an Elasticsearch single-node cluster, installs and configures Augmented-Search for Digitall  |
-| 04-jexperience | Installs and configures jExperience |
-| 05-cluster | Spins-up a 3 nodes Jahia cluster |
+| [01-personal-api-tokens](./01-personal-api-tokens/) | With a local DerbyBD database, install the `Personal API Tokens` module and create a token |
+| [02-digitall-mariadb](./02-digitall-mariadb) | With a MariaDB database, install Digitall |
+| [03-augmented-search](./03-augmented-search) | Add an Elasticsearch single-node cluster, install and configure Augmented-Search for Digitall  |
+| 04-jexperience | Install and configure jExperience |
+| 05-cluster | Spin-up a 3 nodes Jahia cluster |
 
 __Reminder__: Jahia default root credentials are `root/root1234`.
 
