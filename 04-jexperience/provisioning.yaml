@@ -13,3 +13,6 @@
  - installAndStartBundle: 'mvn:org.jahia.modules/forms-extended-inputs/2.0.0'
  - startBundle: 'forms-extended-inputs/2.0.0'
 
+# Install jExperience
+ - installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
+ - startBundle: 'jexperience/2.0.0'
