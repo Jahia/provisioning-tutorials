@@ -1,4 +1,4 @@
-# Augmented-Search tutorial
+# jExeperience tutorial
 
 Building on top of the [previous tutorial](../03-augmented-search), we're going to:
 
