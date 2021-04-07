@@ -7,14 +7,14 @@
 # - karafCommand: "config:property-set jexperience.jCustomerUsePublicAddressesForAdmin false"
 # - karafCommand: "config:property-set jexperience.jCustomerKey 670c26d1cc413346c3b2fd9ce65dab41"
 # - karafCommand: "config:update"
-- installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
-- startBundle: 'jexperience/2.0.0'
-# - editConfiguration: "org.jahia.modules.jexperience.settings-global"
-#   configIdentifier: "id1"
-#   properties: 
-#     jexperience.jCustomerURL: "https://jcustomer:9443"
-#     jexperience.jCustomerUsername: "karaf"
-#     jexperience.jCustomerPassword: "karaf"
-#     jexperience.jCustomerTrustAllCertificates: "true"
-#     jexperience.jCustomerUsePublicAddressesForAdmin: "false"
-#     jexperience.jCustomerKey: "670c26d1cc413346c3b2fd9ce65dab41"
+# - installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
+# - startBundle: 'jexperience/2.0.0'
+- editConfiguration: "org.jahia.modules.jexperience.settings-global"
+  configIdentifier: "id1"
+  properties: 
+    jexperience.jCustomerURL: "https://jcustomer:9443"
+    jexperience.jCustomerUsername: "karaf"
+    jexperience.jCustomerPassword: "karaf"
+    jexperience.jCustomerTrustAllCertificates: "true"
+    jexperience.jCustomerUsePublicAddressesForAdmin: "false"
+    jexperience.jCustomerKey: "670c26d1cc413346c3b2fd9ce65dab41"
