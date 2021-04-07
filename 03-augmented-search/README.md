@@ -26,14 +26,50 @@ While the elasticsearch cluster is starting, you will first see the MariaDB cont
 
 At the end of startup (and once indexing is complete), you'll be able to perform your first search using our GraphQL API:
 
-__Query__:
+__Query__: As an authenticated user (root), fetch 2 hits across all documents (no search terms) in the __EDIT__ workspace
 ```bash
-
+curl --request POST \
+  --url http://localhost:8080/modules/graphql \
+  --header 'Content-Type: application/json' \
+  --header 'authorization: APIToken kgHNm05iQV61I+GY3X5HVr13i866HAAsyou8G+eGubk=' \
+  --data '{"query":"query {\n  search(q: \"\", workspace: EDIT) {\n    results(size: 2) {\n      hits {\n        displayableName\n      }\n    }\n  }\n}"}'
 ```
 
 __Response__:
 ```bash
+{"data":{"search":{"results":{"hits":[{"displayableName":"News Entry"},{"displayableName":"History"}]}}}}
+```
 
+You might notice that we searched in the EDIT workspace, which is only accessible to authenticated user, look at what happens if you run the same query with an invalid token:
+
+__Query__: As guest, fetch 2 hits across all documents (no search terms) in the __EDIT__ workspace
+```bash
+curl --request POST \
+  --url http://localhost:8080/modules/graphql \
+  --header 'Content-Type: application/json' \
+  --header 'authorization: APIToken I-DO-NOT-EXIST' \
+  --data '{"query":"query {\n  search(q: \"\", workspace: EDIT) {\n    results(size: 2) {\n      hits {\n        displayableName\n      }\n    }\n  }\n}"}'
+```
+
+__Response__:
+```bash
+{"data":{"search":{"results":{"hits":[]}}}}
+```
+
+Now try changing the workspace to LIVE, which should work fine as guest.
+
+__Query__: As guest, fetch 2 hits across all documents (no search terms) in the __LIVE__ workspace
+```bash
+curl --request POST \
+  --url http://localhost:8080/modules/graphql \
+  --header 'Content-Type: application/json' \
+  --header 'authorization: APIToken I-DO-NOT-EXIST' \
+  --data '{"query":"query {\n  search(q: \"\", workspace: LIVE) {\n    results(size: 2) {\n      hits {\n        displayableName\n      }\n    }\n  }\n}"}'
+```
+
+__Response__:
+```bash
+{"data":{"search":{"results":{"hits":[{"displayableName":"Press Releases Entry"},{"displayableName":"Events"}]}}}}
 ```
 
 You will also be able to see our demo search UI when visiting Digitall's home page at http://localhost:8080.
