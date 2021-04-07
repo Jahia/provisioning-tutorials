@@ -23,6 +23,8 @@ These examples serve as proof-of-principles and are not meant at being used "as-
 | 04-jexperience | Installs and configures jExperience |
 | 05-cluster | Spins-up a 3 nodes Jahia cluster |
 
+__Reminder__: Jahia default root credentials are `root/root1234`.
+
 ## Prerequisites
 
 In order to follow these tutorials you will need the Docker Engine installed on your machine. 
