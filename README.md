@@ -12,7 +12,7 @@ Primariraly aimed at containerized environments (i.e. using Docker) this API is 
 
 Each folder in this repository contains all the necessary elements to start a Jahia environment following different use cases. 
 
-These examples serves as proof-of-principles and are not meant at being used "as-is" for production environment.
+These examples serve as proof-of-principles and are not meant at being used "as-is" for production environment.
 
 | Tutorial | Description |
 | --- | --- |
