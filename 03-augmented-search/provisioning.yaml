@@ -38,7 +38,7 @@
 - startBundle: 'digitall/2.0.0'
 
 # Create a token
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/01-personal-api-tokens/create-token.groovy"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/01-personal-api-tokens/create-token.groovy"
 
 # Import Digitall site
 - import: "jar:mvn:org.jahia.modules/digitall/2.0.0/zip/import!/users.zip"
@@ -57,12 +57,12 @@
 - startBundle: 'augmented-search/3.1.0'
 
 # Configure database connector with a groovy script
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/03-augmented-search/db-connection.groovy"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/db-connection.groovy"
 
 # Configure Augmented Search and digitall
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/03-augmented-search/as-config.graphql"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-config.graphql"
 # Trigger a full indexation
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/03-augmented-search/as-index.graphql"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
 
 # Install our Augmented-Search sample UI and enable it on Digitall
 - installAndStartBundle: 'mvn:org.jahia.modules/augmented-search-ui/3.0.1'
