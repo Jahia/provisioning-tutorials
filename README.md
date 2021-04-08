@@ -36,7 +36,7 @@ __Note__: Please ensure that your Docker installation allows allocating up to 4G
 
 ## Get started
 
-Ready to get started? If you're new to Jahia with Docker, you should being with the [first tutorial](./00-start-jahia/).
+Ready to get started? If you're new to Jahia with Docker, you should begin with the [first tutorial](./00-start-jahia/).
 
 ## Documentation
 
