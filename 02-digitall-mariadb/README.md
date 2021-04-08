@@ -32,7 +32,7 @@ You will have a fully fonctional Digitall site when visiting http://localhost:80
 
 In this tutorial we switched from `docker run` to `docker-compose`, facilitating the start of multiple containers.
 
-Two elements are worth pointing in this examples:
+Two elements are worth pointing in this example:
 
 * The containers are not named and are not using volumes
 * Docker-compose is executed with `--renew-anon`
