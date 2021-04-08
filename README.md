@@ -20,7 +20,7 @@ These examples serve as proof-of-principles and are not meant at being used "as-
 | --- | --- |
 | [00-start-jahia](./00-start-jahia/) | Start Jahia Enterprise with Docker |
 | [01-personal-api-tokens](./01-personal-api-tokens/) | With a local DerbyBD database, install the `Personal API Tokens` module and create a token |
-| [02-digitall-mariadb](./02-digitall-mariadb) | With a MariaDB database, install Digitall |
+| [02-digitall-mariadb](./02-digitall-mariadb) | With a MariaDB database, install `Digitall` |
 | [03-augmented-search](./03-augmented-search) | Add an Elasticsearch single-node cluster, install and configure `Augmented-Search` for Digitall  |
 | [04-jexperience](./04-jexperience) | Install and configure `jExperience` |
 
