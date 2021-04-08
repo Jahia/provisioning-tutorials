@@ -54,7 +54,7 @@ You should receive the following:
 
 ## What did we learn ?
 
-In this tutorial we used `docker run` with an environment variable to use an [provisioning script](./provisioning.yaml) stored externally.
+In this tutorial we used `docker run` with an environment variable pointing to a [provisioning script](./provisioning.yaml) stored externally.
 
 This [provisioning script](./provisioning.yaml) uses four different commands:
 
