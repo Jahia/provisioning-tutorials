@@ -39,7 +39,7 @@ Two elements are worth pointing in this example:
 
 Both elements make sure we're starting from scratch everytime the environment is spun up. You might want to modify this behavior depending of your use case.
 
-We're still using an environment variable to use a [provisioning script](./provisioning.yaml) stored externally, but this time it's declated within the [docker-compose.yml](./docker-compose.yml)
+We're still using an environment variable pointing to a [provisioning script](./provisioning.yaml) stored externally, but this time it's declated within the [docker-compose.yml](./docker-compose.yml)
 
 This [provisioning script](./provisioning.yaml) use a few new commands when compared to the previous tutorial:
 
