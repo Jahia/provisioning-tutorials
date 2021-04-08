@@ -55,4 +55,4 @@ This [provisioning script](./provisioning.yaml) uses one new commands when compa
 
 These tutorials should have provided you with a starting point for better understanding how to use Jahia's provisioning API.
 
-[Back to index](../)
+[Back to index](https://github.com/Jahia/provisioning-tutorials/)
