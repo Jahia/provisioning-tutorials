@@ -78,6 +78,16 @@ __Response__:
 
 __PS__: Since we're not searching on a particular search term, the exact result order between the two workspaces might differ (as they do in the example above).
 
+## What did we learn ?
+
+In this tutorial got much closer to a complex real-world scenario in which we took a released version of Jahia and customized it to our own use case by installing additional modules, and performing some GraphQL queries.
+
+This [provisioning script](./provisioning.yaml) uses a few new commands when compared to the previous tutorial:
+
+* `include` to execute another provisioning script. As you probably noted we were able to run the provisioning script from Tutorial #2 by including it in this script.
+* `addMavenRepository` to install modules from another Nexus repository (in this particular case, Jahia Store)
+* `enable` to enable a set module with a set siteKey
+
 ## Next
 
 In the next tutorial, we're going to add jExperience and forms to the mix [click here](../04-jexperience/).
