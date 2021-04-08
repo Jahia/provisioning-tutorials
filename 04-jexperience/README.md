@@ -40,6 +40,9 @@ At the end of startup (give it a minute or two), open a browser to Digitall's ho
 
 You can also validate that the connection between jExperience and Unomi is operating operational.
 
+<img width="800" alt="jExperience Settings" src="https://user-images.githubusercontent.com/5667028/113959331-a8827800-97f0-11eb-815c-0cff08874484.png">
+
+
 ## What did we learn ?
 
 We added one level of complexity by adding another container (Unomi) requiring a specific configuration to be stored in Jahia.
