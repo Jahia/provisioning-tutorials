@@ -12,7 +12,7 @@ To get started, execute the following commands:
 ```bash
 cd ~
 git clone git@github.com:Jahia/provisioning-tutorials.git
-cd provisioning-examples/04-jexperience
+cd provisioning-tutorial/04-jexperience
 ```
 
 This tutorial is a bit more combursome when compared to the previous ones as it requires you to obtain a [GeoLite license key from maxmind]( https://dev.maxmind.com/geoip/geoip2/geolite2/). This is used by Unomi to associate IP addresses with their geolocation.
