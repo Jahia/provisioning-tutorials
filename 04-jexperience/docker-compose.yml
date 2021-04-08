@@ -4,6 +4,9 @@ services:
     image: ${MARIADB_IMAGE}
     mem_limit: 2gb
     command: --max_allowed_packet=134217728 --transaction-isolation=READ-UNCOMMITTED --innodb-lock-wait-timeout=10
+    networks:
+      stack:
+        ipv4_address: 172.16.1.10    
     environment:
       MYSQL_ROOT_PASSWORD: mariadbP@55
       MYSQL_DATABASE: jahia
@@ -11,6 +14,9 @@ services:
       MYSQL_PASSWORD: jahia
   elasticsearch:
     image: ${ELASTICSEARCH_IMAGE}   
+    networks:
+      stack:
+        ipv4_address: 172.16.1.20    
     environment:
       - discovery.type=single-node
       - cluster.name=jahia-es-cluster      
@@ -23,6 +29,9 @@ services:
     ports:
       - 8080:8080
     mem_limit: 4gb
+    networks:
+      stack:
+        ipv4_address: 172.16.1.30    
     environment:
       DBMS_TYPE: mariadb
       DB_HOST: mariadb
@@ -34,12 +43,17 @@ services:
       MAX_RAM_PERCENTAGE: 95
       EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/04-jexperience/provisioning.yaml'
   jcustomer:
-    image: jahia/jcustomer:1.5.4    
+    image: jahia/jcustomer:1.5.4  
+    networks:
+      stack:
+        ipv4_address: 172.16.1.40    
     environment:
       - unomi_env_var_UNOMI_ELASTICSEARCH_ADDRESSES=elasticsearch:9200
       - unomi_env_var_UNOMI_ELASTICSEARCH_CLUSTERNAME=jahia-es-cluster
       - unomi_env_var_UNOMI_CLUSTER_PUBLIC_ADDRESS=http://localhost:8181
       - unomi_env_var_UNOMI_CLUSTER_INTERNAL_ADDRESS=https://jcustomer:9443
+      - unomi_env_var_UNOMI_THIRDPARTY_PROVIDER1_IPADDRESSES=172.16.1.30
+      - unomi_env_var_UNOMI_THIRDPARTY_PROVIDER1_ALLOWEDEVENTS=login,updateProperties
       - unomi_env_var_JAVA_MAX_MEM=2G
       - unomi_env_var_UNOMI_ROOT_PASSWORD=karaf
       - unomi_env_var_UNOMI_HAZELCAST_TCPIP_MEMBERS=jcustomer
@@ -52,3 +66,8 @@ services:
       - elasticsearch
 networks:
   stack:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.1.0/24
