@@ -12,11 +12,13 @@ In a terminal, run the following command:
 docker run -p 8080:8080 jahia/jahia-ee:8.0.3.0
 ```
 
-This will start a Jahia Enterprise container, with the default 30 days license. This Jahia instance will be available at http://localhost:8080
+This will start a Jahia Enterprise container, with the default 30 days license. 
+
+This Jahia instance will be available at http://localhost:8080
 
 ## What did we learn ?
 
-If you are new to Docker you learnt how to manually start a container, if you were already familiar with Docker you probably noticed that Jahia can be started very easily with Docker.
+If you are new to Docker you learnt how to manually start a container, if you were already familiar with Docker you probably noticed that Jahia can be started very easily.
 
 ## Next
 
