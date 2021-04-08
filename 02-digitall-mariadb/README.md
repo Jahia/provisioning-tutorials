@@ -9,7 +9,7 @@ Building on top of the [previous tutorial](../01-personal-api-tokens), we're goi
 
 The provisioning script is getting slightly more complex, as we need to install all of the modules needed by Digitall.
 
-We will also need to use docker-compose to spin-up the environment.
+We will also need use docker-compose to spin-up the environment.
 
 ## Instructions
 
