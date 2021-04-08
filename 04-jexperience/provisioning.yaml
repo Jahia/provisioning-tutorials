@@ -22,8 +22,8 @@
   site: "digitall"
 
 # Configure jExperience
-- editConfiguration: "org.jahia.modules.jexperience"
-  configIdentifier: "settings-global"
+- editConfiguration: "org.jahia.modules.jexperience.settings"
+  configIdentifier: "global"
   properties: 
     jexperience.jCustomerURL: "https://jcustomer:9443"
     jexperience.jCustomerUsername: "karaf"
