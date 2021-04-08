@@ -38,6 +38,16 @@ docker-compose up --renew-anon
 
 At the end of startup (give it a minute or two), open a browser to Digitall's home page at http://localhost:8080.
 
-## Next
+You can also validate that the connection between jExperience and Unomi is operating operational.
 
-In the next tutorial, we're going to add jExperience and forms to the mix [click here](../04-jexperience-forms/).
+## What did we learn ?
+
+We added one level of complexity by adding another container (Unomi) requiring a specific configuration to be stored in Jahia.
+
+This [provisioning script](./provisioning.yaml) uses one new commands when compared to the previous tutorial:
+
+* `editConfiguration` Create (or update) a configuration file in jahia `karaf/etc`.
+
+## That's it !
+
+These tutorials should have provided you with a starting point for better understanding how to use Jahia's provisioning API.
