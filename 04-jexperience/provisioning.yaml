@@ -1,3 +1,6 @@
+# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/home
+# You can also find some details here: https://github.com/Jahia/jahia-private/blob/master/bundles/provisioning/README.md
+
 # Start with the provisioning script from Tutorial #3
 - include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/provisioning.yaml
 
