@@ -1,3 +1,6 @@
+# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/home
+# You can also find some details here: https://github.com/Jahia/jahia-private/blob/master/bundles/provisioning/README.md
+
 # Start with the provisioning script from Tutorial #2
 - include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/02-digitall-mariadb/provisioning.yaml
 
@@ -5,25 +8,24 @@
 # So we're adding a new repository to be able to resolve these dependencies
 - addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
 
-# Install Augmented-Search
-- installAndStartBundle: 'mvn:org.jahia.modules/database-connector/1.3.0'
-- startBundle: 'database-connector/1.3.0'
-- installAndStartBundle: 'mvn:org.jahia.modules/elasticsearch-connector-7/7.4.3'
-- startBundle: 'elasticsearch-connector-7/7.4.3'
-- installAndStartBundle: 'mvn:org.jahia.modules/augmented-search/3.1.0'
-- startBundle: 'augmented-search/3.1.0'
+# Install and start bundles for Augmented Search
+- installBundle: 
+  - 'mvn:org.jahia.modules/database-connector/1.3.0'
+  - 'mvn:org.jahia.modules/elasticsearch-connector-7/7.4.3'
+  - 'mvn:org.jahia.modules/augmented-search/3.1.0'
+  - 'mvn:org.jahia.modules/augmented-search-ui/3.0.1'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# Enable Augmented Search sample UI on Digitall
+- enable: "augmented-search-ui"
+  site: "digitall"
 
 # Configure database connector with a groovy script
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/db-connection.groovy"
 
 # Configure Augmented Search and digitall
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-config.graphql"
-
-# Install our Augmented-Search sample UI and enable it on Digitall
-- installAndStartBundle: 'mvn:org.jahia.modules/augmented-search-ui/3.0.1'
-- startBundle: 'augmented-search-ui/3.0.1'
-- enable: "augmented-search-ui"
-  site: "digitall"
 
 # Add Augmented-Search UI module below the slider in Digitall home
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/add-search-ui.graphql"
