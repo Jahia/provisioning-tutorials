@@ -1,21 +1,16 @@
 # Start with the provisioning script from Tutorial #3
 - include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/provisioning.yaml
 
-# Install Forms
-- installAndStartBundle: 'mvn:org.jahia.modules/forms-core/3.2.0'
-- startBundle: 'forms-core/3.2.0'
-- installAndStartBundle: 'mvn:org.jahia.modules/forms-snippets-extension/3.0.0'
-- startBundle: 'forms-snippets-extension/3.0.0'
-- installAndStartBundle: 'mvn:org.jahia.modules/forms-nocss-theme/2.0.0'
-- startBundle: 'forms-nocss-theme/2.0.0'
-- installAndStartBundle: 'mvn:org.jahia.modules/forms-prefill/2.0.0'
-- startBundle: 'forms-prefill/2.0.0'
-- installAndStartBundle: 'mvn:org.jahia.modules/forms-extended-inputs/2.0.0'
-- startBundle: 'forms-extended-inputs/2.0.0'
-
-# Install jExperience module
-- installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
-- startBundle: 'jexperience/2.0.0'
+# Install and start bundles for Forms and jExperience
+- installBundle: 
+  - 'mvn:org.jahia.modules/forms-core/3.2.0'
+  - 'mvn:org.jahia.modules/forms-snippets-extension/3.0.0'
+  - 'mvn:org.jahia.modules/forms-nocss-theme/2.0.0'
+  - 'mvn:org.jahia.modules/forms-prefill/2.0.0'
+  - 'mvn:org.jahia.modules/forms-extended-inputs/2.0.0'
+  - 'mvn:org.jahia.modules/jexperience/2.0.0'
+  autoStart: true
+  uninstallPreviousVersion: true
 
 # Enable jExperience on digitall
 - enable: "jexperience"
