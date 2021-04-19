@@ -35,7 +35,7 @@ In this tutorial we switched from `docker run` to `docker-compose`, facilitating
 Two elements are worth pointing in this example:
 
 * The containers are not named and are not using volumes
-* Docker-compose is executed with `--renew-anon`
+* Docker-compose is executed with `--renew-anon`, making sure to start from scratch everytime.
 
 Both elements make sure we're starting from scratch everytime the environment is spun up. You might want to modify this behavior depending of your use case.
 
@@ -43,7 +43,7 @@ We're still using an environment variable pointing to a [provisioning script](./
 
 This [provisioning script](./provisioning.yaml) use a few new commands when compared to the previous tutorial:
 
-* `installOrUpgradeBundle` to install a Jahia module or upgrade it if it was already present
+* `installBundle` to install a set of Jahia modules
 * `import` import an archive within Jahia
 * `importSite` import a site within Jahia
 
