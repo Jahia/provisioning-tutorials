@@ -41,3 +41,5 @@ Ready to get started? If you're new to Jahia with Docker, you should begin with 
 ## Documentation
 
 The provisioning API is documented on the Academy [ADD LINK ONCE PUBLISHED]
+
+More details about the Maven protocol [here](https://ops4j1.jira.com/wiki/spaces/paxurl/pages/3833866/Mvn+Protocol)
