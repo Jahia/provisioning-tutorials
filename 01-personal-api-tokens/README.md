@@ -3,7 +3,6 @@
 In this example we're going to:
 
 * start Jahia Enterprise, single node and use a local DerbyDB
-* Install Personal API Tokens
 * Use a groovy script to create an API token attached to root (see: https://academy.jahia.com/documentation/developer/jahia/8/using-personal-api-tokens)
 
 For simplicity's sake, the groovy script creating the token is located in this repository and accessed directly from the `provisioning.yaml` script.
