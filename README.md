@@ -4,7 +4,7 @@
 
 # Provisioning Tutorials
 
-Starting with version 8.0.3.0, Jahia comes with a provisioning API to facilitate the orchestration of Jahia environments. 
+Starting with version 8.1.0.0, Jahia comes with a provisioning API to facilitate the orchestration of Jahia environments. 
 
 Its main objective is to automate the startup of complex environment starting from published Jahia releases. When using the provisioning API, Jahia will be able to reach "production" without requiring manual actions nor direct filesystem access to the Jahia environment.
 

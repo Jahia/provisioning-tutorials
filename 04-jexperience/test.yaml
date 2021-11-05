@@ -1,6 +1,6 @@
 # Install jExperience module
-- installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.0.0'
-- startBundle: 'jexperience/2.0.0'
+- installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.2.1'
+- startBundle: 'jexperience/2.2.1'
 
 # Enable jExperience on digitall
 - enable: "jexperience"
