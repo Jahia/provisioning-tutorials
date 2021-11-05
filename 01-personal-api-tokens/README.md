@@ -43,6 +43,7 @@ You can also check the response when sending an invalid token (you will be recog
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
+  --header 'Origin: http://localhost:8080' \  
   --header 'authorization: APIToken THIS-TOKEN-DOES-NOT-EXIST' \
   --data '{"query":"query {\n  currentUser {\n    name\n  }\n}"}'
 ```
