@@ -48,9 +48,9 @@ curl --request POST \
   --data '{"query":"query {\n  currentUser {\n    name\n  }\n}"}'
 ```
 
-You should receive the following:
+You should a `permission denied` message:
 ```
-{"data":{"currentUser":{"name":"guest"}}}
+{"errors":[{"message":"Permission denied","locations":[{"line":2,"column":3}],"path":["currentUser"],"extensions":{"classification":"GqlAccessDeniedException"},"errorType":"GqlAccessDeniedException"}],"data":{"currentUser":null}}
 ```
 
 ## What did we learn ?
