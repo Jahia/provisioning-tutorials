@@ -3,7 +3,6 @@
 In this example we're going to:
 
 * start Jahia Enterprise, single node and use a local DerbyDB
-* Install Personal API Tokens
 * Use a groovy script to create an API token attached to root (see: https://academy.jahia.com/documentation/developer/jahia/8/using-personal-api-tokens)
 
 For simplicity's sake, the groovy script creating the token is located in this repository and accessed directly from the `provisioning.yaml` script.
@@ -17,7 +16,7 @@ Starting this example is very straight-forward and has no external dependencies 
 As with most of the examples in this repository, we're going to directly reference the provisioning script by its URL. But it could also be located on the Jahia's filesystem (or in mounted volume).
 
 ```bash
-docker run -e EXECUTE_PROVISIONING_SCRIPT="https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/01-personal-api-tokens/provisioning.yaml" -p 8080:8080 jahia/jahia-ee:8.0.3.0
+docker run -e EXECUTE_PROVISIONING_SCRIPT="https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/01-personal-api-tokens/provisioning.yaml" -p 8080:8080 jahia/jahia-ee:8.1.0.0
 ```
 
 The command above expose a running Jahia on http://localhost:8080 (watch-out if this port is already used on your machine).
@@ -39,18 +38,19 @@ You should receive the following:
 {"data":{"currentUser":{"name":"root"}}}
 ```
 
-You can also check the response when sending an invalid token (you will be recognized as "guest")
+You can also check the response when sending an invalid token.
 ```bash
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
+  --header 'Origin: http://localhost:8080' \
   --header 'authorization: APIToken THIS-TOKEN-DOES-NOT-EXIST' \
   --data '{"query":"query {\n  currentUser {\n    name\n  }\n}"}'
 ```
 
-You should receive the following:
+You should a `permission denied` message:
 ```
-{"data":{"currentUser":{"name":"guest"}}}
+{"errors":[{"message":"Permission denied","locations":[{"line":2,"column":3}],"path":["currentUser"],"extensions":{"classification":"GqlAccessDeniedException"},"errorType":"GqlAccessDeniedException"}],"data":{"currentUser":null}}
 ```
 
 ## What did we learn ?
