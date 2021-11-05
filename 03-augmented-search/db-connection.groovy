@@ -13,7 +13,7 @@ JCRCallback<Object> callback = new JCRCallback<Object>() {
         if (!node.hasNode("databaseConnector")) {
             def databaseConnectorNode = node.addNode("databaseConnector", "dc:databaseConnector")
             if (!databaseConnectorNode.hasNode("augmented-search-conn")) {
-                def elasticsearchConnection = databaseConnectorNode.addNode("augmented-search-conn", "ec7:elasticsearchConnection")
+                def elasticsearchConnection = databaseConnectorNode.addNode("augmented-search-conn", "ec:elasticsearchConnection")
                 elasticsearchConnection.setProperty("dc:databaseType", "ELASTICSEARCH7")
                 elasticsearchConnection.setProperty("dc:host", "elasticsearch")
                 elasticsearchConnection.setProperty("dc:id", "augmented-search-conn")
