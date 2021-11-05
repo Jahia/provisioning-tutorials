@@ -11,7 +11,7 @@
 # Install and start bundles for Augmented Search
 - installBundle: 
   - 'mvn:org.jahia.modules/database-connector/1.4.0'
-  - 'mvn:org.jahia.modules/elasticsearch-connector-7/7.4.3'
+  - 'mvn:org.jahia.modules/elasticsearch-connector/3.0.0'
   - 'mvn:org.jahia.modules/augmented-search/3.2.0'
   - 'mvn:org.jahia.modules/augmented-search-ui/3.0.1'
   autoStart: true
