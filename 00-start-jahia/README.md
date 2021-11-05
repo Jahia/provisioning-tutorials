@@ -22,4 +22,4 @@ If you are new to Docker you learnt how to manually start a container, if you we
 
 ## Next
 
-In the next tutorial, we're going to automatically install the Personal API Tokens module and create a token at Jahia startup, [click here](../01-personal-api-tokens/).
+In the next tutorial, we're going to automatically create a Personal API Token at Jahia startup and use it in a GraphQL API call, [click here](../01-personal-api-tokens/).
