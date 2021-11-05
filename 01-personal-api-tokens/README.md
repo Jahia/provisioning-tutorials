@@ -38,7 +38,7 @@ You should receive the following:
 {"data":{"currentUser":{"name":"root"}}}
 ```
 
-You can also check the response when sending an invalid token (you will be recognized as "guest")
+You can also check the response when sending an invalid token.
 ```bash
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
