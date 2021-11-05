@@ -29,6 +29,7 @@ You can verify that the token was successefully installed and is usable by runni
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
+  --header 'Origin: http://localhost:8080' \
   --header 'authorization: APIToken kgHNm05iQV61I+GY3X5HVr13i866HAAsyou8G+eGubk=' \
   --data '{"query":"query {\n  currentUser {\n    name\n  }\n}"}'
 ```

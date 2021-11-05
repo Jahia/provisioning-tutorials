@@ -37,6 +37,7 @@ __Query__: As an authenticated user (root), fetch 2 hits across all documents (n
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
+  --header 'Origin: http://localhost:8080' \
   --header 'authorization: APIToken kgHNm05iQV61I+GY3X5HVr13i866HAAsyou8G+eGubk=' \
   --data '{"query":"query {\n  search(q: \"\", workspace: EDIT) {\n    results(size: 2) {\n      hits {\n        displayableName\n      }\n    }\n  }\n}"}'
 ```
@@ -53,6 +54,7 @@ __Query__: As guest, fetch 2 hits across all documents (no search terms) in the 
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
+  --header 'Origin: http://localhost:8080' \
   --data '{"query":"query {\n  search(q: \"\", workspace: EDIT) {\n    results(size: 2) {\n      hits {\n        displayableName\n      }\n    }\n  }\n}"}'
 ```
 
@@ -68,6 +70,7 @@ __Query__: As guest, fetch 2 hits across all documents (no search terms) in the 
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
   --header 'Content-Type: application/json' \
+  --header 'Origin: http://localhost:8080' \
   --data '{"query":"query {\n  search(q: \"\", workspace: LIVE) {\n    results(size: 2) {\n      hits {\n        displayableName\n      }\n    }\n  }\n}"}'
 ```
 
