@@ -43,7 +43,7 @@ services:
       MAX_RAM_PERCENTAGE: 95
       EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/04-jexperience/provisioning.yaml'
   jcustomer:
-    image: jahia/jcustomer:1.5.4  
+    image: jahia/jcustomer:1.5.6  
     networks:
       stack:
         ipv4_address: 172.16.1.40    
