@@ -22,8 +22,8 @@ Once done, update the variable `JCUSTOMER_MAXMIND_GEOIP2_CITY_DATABASE_URL` , by
 ```bash
 JCUSTOMER_MAXMIND_GEOIP2_CITY_DATABASE_URL=https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=CHANGEME&suffix=tar.gz
 JAHIA_IMAGE=jahia/jahia-ee:8.1.0.0
-UNOMI_IMAGE=jahia/jcustomer:1.5.6
-ELASTICSEARCH_IMAGE=docker.elastic.co/elasticsearch/elasticsearch:7.4.2
+UNOMI_IMAGE=jahia/jcustomer:1.6.0
+ELASTICSEARCH_IMAGE=docker.elastic.co/elasticsearch/elasticsearch:7.17.1
 MARIADB_IMAGE=library/mariadb:10-focal
 ```
 
