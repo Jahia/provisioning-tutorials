@@ -11,7 +11,7 @@
   - 'mvn:org.jahia.modules/forms-nocss-theme/2.0.0'
   - 'mvn:org.jahia.modules/forms-prefill/2.0.0'
   - 'mvn:org.jahia.modules/forms-extended-inputs/2.0.0'
-  - 'mvn:org.jahia.modules/jexperience/2.2.1'
+  - 'mvn:org.jahia.modules/jexperience/2.3.0'
   autoStart: true
   uninstallPreviousVersion: true
 
