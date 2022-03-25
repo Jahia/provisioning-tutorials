@@ -28,7 +28,7 @@ services:
       - mariadb
     ports:
       - 8080:8080
-    mem_limit: 4gb
+    mem_limit: 8gb
     networks:
       stack:
         ipv4_address: 172.16.1.30    
