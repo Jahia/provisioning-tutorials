@@ -5,9 +5,9 @@
 - include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/provisioning.yaml
 
 # Install and start bundles for Forms and jExperience
-- installBundle: 
-  - 'mvn:org.jahia.modules/forms-core/3.4.0'
-  - 'mvn:org.jahia.modules/forms-snippets-extension/3.1.0'
+- installBundle:
+  - 'mvn:org.jahia.modules/forms-core/3.5.0'
+  - 'mvn:org.jahia.modules/forms-snippets-extension/3.2.0'
   - 'mvn:org.jahia.modules/forms-nocss-theme/2.0.0'
   - 'mvn:org.jahia.modules/forms-prefill/2.0.0'
   - 'mvn:org.jahia.modules/forms-extended-inputs/2.0.0'
@@ -22,7 +22,7 @@
 # Configure jExperience
 - editConfiguration: "org.jahia.modules.jexperience.settings"
   configIdentifier: "global"
-  properties: 
+  properties:
     jexperience.jCustomerURL: "https://jcustomer:9443"
     jexperience.jCustomerUsername: "karaf"
     jexperience.jCustomerPassword: "karaf"

@@ -16,7 +16,7 @@ Starting this example is very straight-forward and has no external dependencies 
 As with most of the examples in this repository, we're going to directly reference the provisioning script by its URL. But it could also be located on the Jahia's filesystem (or in mounted volume).
 
 ```bash
-docker run -e EXECUTE_PROVISIONING_SCRIPT="https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/01-personal-api-tokens/provisioning.yaml" -p 8080:8080 jahia/jahia-ee:8.1.1.0
+docker run -e EXECUTE_PROVISIONING_SCRIPT="https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/01-personal-api-tokens/provisioning.yaml" -p 8080:8080 jahia/jahia-ee:8.1.2.0
 ```
 
 The command above expose a running Jahia on http://localhost:8080 (watch-out if this port is already used on your machine).
