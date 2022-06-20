@@ -20,7 +20,7 @@ services:
     networks:
       stack:
   jahia:
-    image: jahia/jahia-ee:8.1.0.0
+    image: jahia/jahia-ee:8.1.2.0
     networks:
       - stack
     depends_on:

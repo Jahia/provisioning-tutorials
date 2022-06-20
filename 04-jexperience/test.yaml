@@ -1,6 +1,6 @@
 # Install jExperience module
-- installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.2.1'
-- startBundle: 'jexperience/2.2.1'
+- installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.3.0'
+- startBundle: 'jexperience/2.3.0'
 
 # Enable jExperience on digitall
 - enable: "jexperience"
@@ -9,7 +9,7 @@
 # Configure jExperience
 - editConfiguration: "org.jahia.modules.jexperience"
   configIdentifier: "settings-global"
-  properties: 
+  properties:
     jexperience.jCustomerURL: "https://jcustomer:9443"
     jexperience.jCustomerUsername: "karaf"
     jexperience.jCustomerPassword: "karaf"
