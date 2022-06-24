@@ -44,7 +44,7 @@ curl --request POST \
 
 __Response__:
 ```bash
-{"data":{"search":{"results":{"hits":[{"displayableName":"News Entry"},{"displayableName":"History"}]}}}}
+{"data":{"search":{"results":{"hits":[{"displayableName":"Singh"},{"displayableName":"Digitall Network Expands To Transportation Industry"}]}}}}
 ```
 
 You might notice that we searched in the EDIT workspace, which is only accessible to an authenticated user, look at what happens if you run the same query without providing a token:
@@ -76,7 +76,7 @@ curl --request POST \
 
 __Response__:
 ```bash
-{"data":{"search":{"results":{"hits":[{"displayableName":"Press Releases Entry"},{"displayableName":"Events"}]}}}}
+{"data":{"search":{"results":{"hits":[{"displayableName":"all-Movies"},{"displayableName":"all-Med"}]}}}}
 ```
 
 __PS__: Since we're not searching on a particular search term, the exact result order between the two workspaces might differ (as they do in the example above).
