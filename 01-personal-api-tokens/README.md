@@ -23,7 +23,7 @@ The command above expose a running Jahia on http://localhost:8080 (watch-out if 
 
 ## After startup
 
-You can verify that the token was successefully installed and is usable by running the following curl:
+You can verify that the token was successfully installed and is usable by running the following curl:
 ```bash
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
@@ -60,9 +60,11 @@ In this tutorial we used `docker run` with an environment variable pointing to a
 This [provisioning script](./provisioning.yaml) uses three different commands:
 
 * `installBundle` to install a Jahia module.
-* `startBundle` to start a Jahia module. This command is useful to pause execution of the script until the module was started, allowing further command using that module to be used in the script. If you didn't need to use the module as part of Jahia provisioning, you could simply use `installBundle` with the `autoStart` parameter.
-* `executeScript` to execute a script (groovy or GraphQL). In our example the script is located in a remote location, but we could also exectue a script on Jahia filesystem.
+* `startBundle` to start a Jahia module. This command is useful to pause execution of the script until the module was started, 
+  allowing further command using that module to be used in the script. 
+  If you didn't need to use the module as part of Jahia provisioning, you could simply use `installBundle` with the `autoStart` parameter.
+* `executeScript` to execute a script (groovy or GraphQL). In our example the script is located in a remote location, but we could also execute a script on Jahia filesystem.
 
 ## Next
 
-In the next tutorial, we're going to switch to a MariaDB database and import digitall, [click here](../02-digitall-mariadb/).
+In the next tutorial, we're going to switch to a MariaDB database and import Digitall, [click here](../02-digitall-mariadb/).
