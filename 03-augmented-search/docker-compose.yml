@@ -2,7 +2,10 @@ version: '3.6'
 services:
   mariadb:
     image: library/mariadb:10-focal
-    mem_limit: 2gb
+    deploy:
+      resources:
+        limits:
+          memory: 1gb
     networks:
       - stack
     command: --max_allowed_packet=134217728 --transaction-isolation=READ-UNCOMMITTED --innodb-lock-wait-timeout=10
@@ -15,19 +18,26 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.1
     environment:
       - discovery.type=single-node
+    deploy:
+      resources:
+        limits:
+          memory: 2gb
     ports:
       - 9200:9200
     networks:
       stack:
   jahia:
-    image: jahia/jahia-ee:8.1.2.0
+    image: jahia/jahia-ee:8.1.3
     networks:
       - stack
     depends_on:
       - mariadb
     ports:
       - 8080:8080
-    mem_limit: 4gb
+    deploy:
+      resources:
+        limits:
+          memory: 4gb
     environment:
       DBMS_TYPE: mariadb
       DB_HOST: mariadb

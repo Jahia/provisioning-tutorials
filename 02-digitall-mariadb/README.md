@@ -7,7 +7,7 @@ Building on top of the [previous tutorial](../01-personal-api-tokens), we're goi
 * Link MariaDB and Jahia, then initialize the database
 * Install Digitall
 
-The provisioning script is getting slightly more complex, as we need to install all of the modules needed by Digitall.
+The provisioning script is getting slightly more complex, as we need to install all the modules needed by Digitall.
 
 We will also need use docker-compose to spin-up the environment.
 
@@ -26,7 +26,7 @@ You will first see the MariaDB starting up, Jahia will then create the necessary
 
 ## After startup
 
-You will have a fully fonctional Digitall site when visiting http://localhost:8080
+You will have a fully functional Digitall site when visiting http://localhost:8080
 
 ## What did we learn ?
 
@@ -37,7 +37,7 @@ Two elements are worth pointing in this example:
 * The containers are not named and are not using volumes
 * Docker-compose is executed with `--renew-anon`, making sure to start from scratch everytime.
 
-Both elements make sure we're starting from scratch everytime the environment is spun up. You might want to modify this behavior depending of your use case.
+Both elements make sure we're starting from scratch everytime the environment is spun up. You might want to modify this behavior depending on your use case.
 
 We're still using an environment variable pointing to a [provisioning script](./provisioning.yaml) stored externally, but this time it's declated within the [docker-compose.yml](./docker-compose.yml)
 
