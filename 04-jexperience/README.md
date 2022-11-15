@@ -15,7 +15,7 @@ git clone https://github.com/Jahia/provisioning-tutorials.git
 cd provisioning-tutorials/04-jexperience
 ```
 
-This tutorial is a bit more cumbursome when compared to the previous ones as it requires you to obtain a [GeoLite license key from maxmind]( https://dev.maxmind.com/geoip/geoip2/geolite2/). This is used by Unomi to associate IP addresses with their geolocation.
+This tutorial is a bit more cumbersome when compared to the previous ones as it requires you to obtain a [GeoLite license key from maxmind]( https://dev.maxmind.com/geoip/geoip2/geolite2/). This is used by Unomi to associate IP addresses with their geolocation.
 
 Once done, update the variable `JCUSTOMER_MAXMIND_GEOIP2_CITY_DATABASE_URL` , by replacing `CHANGEME` with the license key, in the `.env` file fetched earlier.
 

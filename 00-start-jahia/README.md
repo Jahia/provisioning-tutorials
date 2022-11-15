@@ -2,14 +2,14 @@
 
 In this example we're going to start Jahia Enterprise.
 
-The main purpose of this very first tutorial is to ensure your Docker environment is setup properly.
+The main purpose of this very first tutorial is to ensure your Docker environment is set up properly.
 
 ## Instructions
 
 In a terminal, run the following command:
 
 ```bash
-docker run -p 8080:8080 jahia/jahia-ee:8.1.2.0
+docker run -p 8080:8080 jahia/jahia-ee:8.1.3
 ```
 
 This will start a Jahia Enterprise container, with the default 30 days license. 
