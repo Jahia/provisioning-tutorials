@@ -9,7 +9,7 @@ The main purpose of this very first tutorial is to ensure your Docker environmen
 In a terminal, run the following command:
 
 ```bash
-docker run -p 8080:8080 jahia/jahia-ee:8.1.3
+docker run -p 8080:8080 jahia/jahia-ee:8.1
 ```
 
 This will start a Jahia Enterprise container, with the default 30 days license. 
