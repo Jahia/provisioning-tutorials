@@ -33,7 +33,7 @@ You might have noticed that we're introducing another layer of flexibility with 
 
 We can now start the environment:
 ```bash
-docker-compose up --renew-anon
+docker-compose up --renew-anon-volumes
 ```
 
 ## After startup
