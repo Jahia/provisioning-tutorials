@@ -35,7 +35,7 @@ In this tutorial we switched from `docker run` to `docker-compose`, facilitating
 Two elements are worth pointing in this example:
 
 * The containers are not named and are not using volumes
-* Docker-compose is executed with `--renew-anon`, making sure to start from scratch everytime.
+* Docker-compose is executed with `--renew-anon-volumes`, making sure to start from scratch everytime.
 
 Both elements make sure we're starting from scratch everytime the environment is spun up. You might want to modify this behavior depending on your use case.
 
