@@ -19,7 +19,7 @@ To get started, execute the following commands:
 cd ~
 git clone https://github.com/Jahia/provisioning-tutorials.git
 cd provisioning-tutorials/02-digitall-mariadb
-docker-compose up --renew-anon
+docker-compose up --renew-anon-volumes
 ```
 
 You will first see the MariaDB starting up, Jahia will then create the necessary tables and continue with its startup. 
