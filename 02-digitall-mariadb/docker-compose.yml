@@ -15,7 +15,7 @@ services:
       MYSQL_USER: jahia
       MYSQL_PASSWORD: jahia
   jahia:
-    image: jahia/jahia-ee:8.1
+    image: jahia/jahia-ee:8.2
     networks:
       - stack
     depends_on:
