@@ -27,6 +27,7 @@ services:
         limits:
           memory: 4gb
     environment:
+      DB_VENDOR : mariadb
       DBMS_TYPE: mariadb
       DB_HOST: mariadb
       DB_NAME: jahia
