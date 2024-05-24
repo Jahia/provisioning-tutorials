@@ -33,7 +33,7 @@ services:
       stack:
         ipv4_address: 172.16.1.30
     environment:
-      DBMS_TYPE: mariadb
+      DB_VENDOR: mariadb
       DB_HOST: mariadb
       DB_NAME: jahia
       DB_USER: jahia
