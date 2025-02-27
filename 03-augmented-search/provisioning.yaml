@@ -6,7 +6,7 @@
 
 # Augmented-Search dependencies are only available from Jahia store
 # So we're adding a new repository to be able to resolve these dependencies
-- addMavenRepository: 'https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
+- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore@id=JahiaStore'
 
 # Install and start bundles for Augmented Search
 - installBundle:
