@@ -6,12 +6,12 @@
 
 # Install and start bundles for Forms and jExperience
 - installBundle:
-  - 'mvn:org.jahia.modules/forms-core/3.11.0'
+  - 'mvn:org.jahia.modules/forms-core/3.15.0'
   - 'mvn:org.jahia.modules/forms-extended-inputs/2.2.0'
   - 'mvn:org.jahia.modules/forms-nocss-theme/2.1.0'
   - 'mvn:org.jahia.modules/forms-prefill/2.1.0'
   - 'mvn:org.jahia.modules/forms-snippets-extension/3.3.0'
-  - 'mvn:org.jahia.modules/jexperience/3.4.0'
+  - 'mvn:org.jahia.modules/jexperience/3.5.1'
   - 'mvn:org.jahia.modules/jexperience-forms-bridge/3.0.0'
   autoStart: true
   uninstallPreviousVersion: true
