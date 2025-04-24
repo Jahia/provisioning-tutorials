@@ -1,8 +1,8 @@
 # For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/home
 # You can also find some details here: https://github.com/Jahia/jahia-private/blob/master/bundles/provisioning/README.md
 
-# Install and start bundles for Personal API Tokens and Digitall
-- installBundle:
+# Install and start modules for Personal API Tokens and Digitall
+- installModule:
   - 'mvn:org.jahia.modules/bookmarks/3.1.0'
   - 'mvn:org.jahia.modules/bootstrap3-core/4.3.0'
   - 'mvn:org.jahia.modules/bootstrap3-components/4.3.0'
