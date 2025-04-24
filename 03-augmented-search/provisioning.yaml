@@ -8,8 +8,8 @@
 # So we're adding a new repository to be able to resolve these dependencies
 - addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore'
 
-# Install and start bundles for Augmented Search
-- installBundle:
+# Install and start modules for Augmented Search
+- installModule:
   - 'mvn:org.jahia.modules/augmented-search/3.6.0'
   - 'mvn:org.jahia.modules/augmented-search-ui/3.0.5'
   - 'mvn:org.jahia.modules/database-connector/1.6.0'
