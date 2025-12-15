@@ -43,7 +43,7 @@ We're still using an environment variable pointing to a [provisioning script](./
 
 This [provisioning script](./provisioning.yaml) use a few new commands when compared to the previous tutorial:
 
-* `installBundle` to install a set of Jahia modules
+* `installModule` to install a set of Jahia modules
 * `import` import an archive within Jahia
 * `importSite` import a site within Jahia
 

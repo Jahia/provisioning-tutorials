@@ -59,10 +59,10 @@ In this tutorial we used `docker run` with an environment variable pointing to a
 
 This [provisioning script](./provisioning.yaml) uses three different commands:
 
-* `installBundle` to install a Jahia module.
-* `startBundle` to start a Jahia module. This command is useful to pause execution of the script until the module was started, 
+* `installModule` to install a Jahia module.
+* `startModule` to start a Jahia module. This command is useful to pause execution of the script until the module was started, 
   allowing further command using that module to be used in the script. 
-  If you didn't need to use the module as part of Jahia provisioning, you could simply use `installBundle` with the `autoStart` parameter.
+  If you didn't need to use the module as part of Jahia provisioning, you could simply use `installModule` with the `autoStart` parameter.
 * `executeScript` to execute a script (groovy or GraphQL). In our example the script is located in a remote location, but we could also execute a script on Jahia filesystem.
 
 ## Next
