@@ -2,8 +2,8 @@
 
 In this example we're going to:
 
-* start Jahia Enterprise, single node and use a local DerbyDB
-* Use a groovy script to create an API token attached to root (see: https://academy.jahia.com/documentation/developer/jahia/8/using-personal-api-tokens)
+- start Jahia Enterprise, single node and use a local DerbyDB
+- Use a groovy script to create an API token attached to root (see: https://academy.jahia.com/documentation/developer/jahia/8/using-personal-api-tokens)
 
 For simplicity's sake, the groovy script creating the token is located in this repository and accessed directly from the `provisioning.yaml` script.
 
@@ -11,7 +11,7 @@ Note that these examples are provided as a proof of principle, you should never,
 
 ## Instructions
 
-Starting this example is very straight-forward and has no external dependencies (aside from content of this repository), it can be simply started using `docker run`. 
+Starting this example is very straight-forward and has no external dependencies (aside from content of this repository), it can be simply started using `docker run`.
 
 As with most of the examples in this repository, we're going to directly reference the provisioning script by its URL. But it could also be located on the Jahia's filesystem (or in mounted volume).
 
@@ -24,6 +24,7 @@ The command above expose a running Jahia on http://localhost:8080 (watch-out if 
 ## After startup
 
 You can verify that the token was successfully installed and is usable by running the following curl:
+
 ```bash
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
@@ -34,11 +35,13 @@ curl --request POST \
 ```
 
 You should receive the following:
+
 ```
 {"data":{"currentUser":{"name":"root"}}}
 ```
 
 You can also check the response when sending an invalid token.
+
 ```bash
 curl --request POST \
   --url http://localhost:8080/modules/graphql \
@@ -49,6 +52,7 @@ curl --request POST \
 ```
 
 You should a `permission denied` message:
+
 ```
 {"errors":[{"message":"Permission denied","locations":[{"line":2,"column":3}],"path":["currentUser"],"extensions":{"classification":"GqlAccessDeniedException"},"errorType":"GqlAccessDeniedException"}],"data":{"currentUser":null}}
 ```
@@ -59,12 +63,12 @@ In this tutorial we used `docker run` with an environment variable pointing to a
 
 This [provisioning script](./provisioning.yaml) uses three different commands:
 
-* `installBundle` to install a Jahia module.
-* `startBundle` to start a Jahia module. This command is useful to pause execution of the script until the module was started, 
-  allowing further command using that module to be used in the script. 
-  If you didn't need to use the module as part of Jahia provisioning, you could simply use `installBundle` with the `autoStart` parameter.
-* `executeScript` to execute a script (groovy or GraphQL). In our example the script is located in a remote location, but we could also execute a script on Jahia filesystem.
+- `installModule` to install a Jahia module.
+- `startModule` to start a Jahia module. This command is useful to pause execution of the script until the module was started,
+  allowing further command using that module to be used in the script.
+  If you didn't need to use the module as part of Jahia provisioning, you could simply use `installModule` with the `autoStart` parameter.
+- `executeScript` to execute a script (groovy or GraphQL). In our example the script is located in a remote location, but we could also execute a script on Jahia filesystem.
 
 ## Next
 
-In the next tutorial, we're going to switch to a MariaDB database and import Digitall, [click here](../02-digitall-mariadb/).
+In the next tutorial, we're going to switch to a MariaDB database and import Luxe, [click here](../02-luxe-mariadb/).

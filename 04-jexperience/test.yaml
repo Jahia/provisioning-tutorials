@@ -1,10 +1,10 @@
 # Install jExperience module
-- installAndStartBundle: 'mvn:org.jahia.modules/jexperience/2.3.0'
-- startBundle: 'jexperience/2.3.0'
+- installAndStartModule: "mvn:org.jahia.modules/jexperience/3.8.0"
+- startModule: "jexperience/3.8.0"
 
-# Enable jExperience on digitall
+# Enable jExperience on Luxe
 - enable: "jexperience"
-  site: "digitall"
+  site: "luxe"
 
 # Configure jExperience
 - editConfiguration: "org.jahia.modules.jexperience"

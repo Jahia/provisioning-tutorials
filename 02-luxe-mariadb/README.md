@@ -2,10 +2,10 @@
 
 Building on top of the [previous tutorial](../01-personal-api-tokens), we're going to:
 
-* start Jahia Enterprise, single node
-* start a MariaDB container with an empty database
-* Link MariaDB and Jahia, then initialize the database
-* Install Digitall
+- start Jahia Enterprise, single node
+- start a MariaDB container with an empty database
+- Link MariaDB and Jahia, then initialize the database
+- Install Digitall
 
 The provisioning script is getting slightly more complex, as we need to install all the modules needed by Digitall.
 
@@ -22,7 +22,7 @@ cd provisioning-tutorials/02-digitall-mariadb
 docker-compose up --renew-anon-volumes
 ```
 
-You will first see the MariaDB starting up, Jahia will then create the necessary tables and continue with its startup. 
+You will first see the MariaDB starting up, Jahia will then create the necessary tables and continue with its startup.
 
 ## After startup
 
@@ -34,8 +34,8 @@ In this tutorial we switched from `docker run` to `docker-compose`, facilitating
 
 Two elements are worth pointing in this example:
 
-* The containers are not named and are not using volumes
-* Docker-compose is executed with `--renew-anon-volumes`, making sure to start from scratch everytime.
+- The containers are not named and are not using volumes
+- Docker-compose is executed with `--renew-anon-volumes`, making sure to start from scratch everytime.
 
 Both elements make sure we're starting from scratch everytime the environment is spun up. You might want to modify this behavior depending on your use case.
 
@@ -43,9 +43,9 @@ We're still using an environment variable pointing to a [provisioning script](./
 
 This [provisioning script](./provisioning.yaml) use a few new commands when compared to the previous tutorial:
 
-* `installBundle` to install a set of Jahia modules
-* `import` import an archive within Jahia
-* `importSite` import a site within Jahia
+- `installModule` to install a set of Jahia modules
+- `import` import an archive within Jahia
+- `importSite` import a site within Jahia
 
 ## Next
 

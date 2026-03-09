@@ -1,10 +1,11 @@
 mutation {
   jcr {
     addNode(
-      parentPathOrId: "/sites/digitall/home/landing", 
-      name: "augmented-search", 
-      primaryNodeType: "sui:augmentedSearch") {
-        uuid
+      parentPathOrId: "/sites/luxe/home/main"
+      name: "augmented-search"
+      primaryNodeType: "sui:augmentedSearch"
+    ) {
+      uuid
     }
   }
 }

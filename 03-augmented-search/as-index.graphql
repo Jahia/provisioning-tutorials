@@ -1,11 +1,11 @@
 mutation {
-    admin {
-        search {
-            startIndex(siteKeys: ["digitall"]) {
-                 jobs {
-                     id
-                 }
-             }
+  admin {
+    search {
+      startIndex(siteKeys: ["luxe"]) {
+        jobs {
+          id
         }
+      }
     }
+  }
 }

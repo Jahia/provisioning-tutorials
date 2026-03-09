@@ -1,33 +1,52 @@
 # For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/home
-# You can also find some details here: https://github.com/Jahia/jahia-private/blob/master/bundles/provisioning/README.md
+# You can also find some details here: https://github.com/Jahia/jahia-private/blob/master/Modules/provisioning/README.md
 
 # Start with the provisioning script from Tutorial #2
-- include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/02-digitall-mariadb/provisioning.yaml
+- include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/02-luxe-mariadb/provisioning.yaml
 
 # Augmented-Search dependencies are only available from Jahia store
 # So we're adding a new repository to be able to resolve these dependencies
-- addMavenRepository: 'https://devtools.jahia.com/nexus/content/repositories/jahia-public-app-store/@id=JahiaStore'
+- addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia-public-app-store/@id=JahiaStore"
 
-# Install and start bundles for Augmented Search
-- installBundle:
-  - 'mvn:org.jahia.modules/augmented-search/3.6.0'
-  - 'mvn:org.jahia.modules/augmented-search-ui/3.0.5'
-  - 'mvn:org.jahia.modules/database-connector/1.6.0'
-  - 'mvn:org.jahia.modules/elasticsearch-connector/3.3.0'
+- installModule:
+    - "js:mvn:org.jahia.modules.javascript/luxe-jahia-demo/LATEST/tgz"
   autoStart: true
   uninstallPreviousVersion: true
 
-# Enable Augmented Search sample UI on Digitall
+- installModule:
+    - "mvn:org.jahia.modules/luxe-prepackaged-website"
+  autoStart: true
+  uninstallPreviousVersion: true
+
+- importSite: "jar:mvn:org.jahia.modules/luxe-prepackaged-website/LATEST/zip/import!/luxe.zip"
+
+# Install and start Modules for Augmented Search
+- installModule:
+    - "mvn:org.jahia.modules/augmented-search/4.0.0"
+    - "mvn:org.jahia.modules/augmented-search-ui/4.0.0"
+    - "mvn:org.jahia.modules/elasticsearch-connector/4.0.1"
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# Configure Connection to Elasticsearch
+- editConfiguration: "org.jahia.modules.elasticsearchConnector"
+  properties:
+    elasticsearchConnector.host: "elasticsearch"
+    elasticsearchConnector.port: "9200"
+    elasticsearchConnector.user: "elastic"
+    elasticsearchConnector.password: "8gFk4F7r3nRz+yHBf7i+/oeEdHoPU0S8" # Encrypted version of "password" (see docker-compose.yml)
+    elasticsearchConnector.useXPackSecurity: "true"
+    elasticsearchConnector.useEncryption: "false"
+    elasticsearchConnector.additionalHostAddresses[0]: "elasticsearch:9210"
+
+# Enable Augmented Search sample UI on Luxe
 - enable: "augmented-search-ui"
-  site: "digitall"
+  site: "luxe"
 
-# Configure database connector with a groovy script
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/db-connection.groovy"
-
-# Configure Augmented Search and digitall
+# Configure Augmented Search and Luxe
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-config.graphql"
 
-# Add Augmented-Search UI module below the slider in Digitall home
+# Add Augmented-Search UI module below the slider in Luxe home
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/add-search-ui.graphql"
 
 # Publish Augmented-Search UI

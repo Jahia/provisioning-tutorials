@@ -1,7 +1,7 @@
 mutation {
-    jcr(workspace: EDIT) {
-        mutateNode(pathOrId: "/sites/digitall/home/landing/augmented-search") {
-            publish(languages: "en")
-        }
+  jcr(workspace: EDIT) {
+    mutateNode(pathOrId: "/sites/luxe/home/main/augmented-search") {
+      publish(languages: "en")
     }
+  }
 }
