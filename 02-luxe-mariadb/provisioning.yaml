@@ -1,0 +1,14 @@
+# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/documentation/jahia-cms/jahia-8.2/dev-ops/provisioning/about-provisioning
+
+# Create a token
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/01-personal-api-tokens/create-token.groovy"
+
+# Install and start Modules for Personal API Tokens and Luxe
+- installModule:
+    - "js:mvn:org.jahia.modules.javascript/luxe-jahia-demo/LATEST/tgz"
+    - "mvn:org.jahia.modules/luxe-prepackaged-website"
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# Import the Luxe site
+- importSite: "jar:mvn:org.jahia.modules/luxe-prepackaged-website/LATEST/zip/import!/luxe.zip"

@@ -1,7 +1,7 @@
-mutation {
+mutation addSearchAsUi {
   jcr {
     addNode(
-      parentPathOrId: "/sites/luxe/home/main"
+      parentPathOrId: "/sites/luxe/home/augmented-search"
       name: "augmented-search"
       primaryNodeType: "sui:augmentedSearch"
     ) {

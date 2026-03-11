@@ -2,8 +2,8 @@
 
 Building on top of the [previous tutorial](../03-augmented-search), we're going to:
 
-* Install jCustomer (Apache Unomi)
-* Configure jCustomer with Jahia and Elasticsearch
+- Install jCustomer (Apache Unomi)
+- Configure jCustomer with Jahia and Elasticsearch
 
 ## Instructions
 
@@ -15,11 +15,11 @@ git clone https://github.com/Jahia/provisioning-tutorials.git
 cd provisioning-tutorials/04-jexperience
 ```
 
-This tutorial is a bit more cumbersome when compared to the previous ones as it requires you to obtain a [GeoLite license key from maxmind]( https://dev.maxmind.com/geoip/geoip2/geolite2/). This is used by Unomi to associate IP addresses with their geolocation.
+This tutorial is a bit more cumbersome when compared to the previous ones as it requires you to obtain a [GeoLite license key from maxmind](https://dev.maxmind.com/geoip/geoip2/geolite2/). This is used by Unomi to associate IP addresses with their geolocation.
 
 Once done, update the variable `JCUSTOMER_MAXMIND_GEOIP2_CITY_DATABASE_URL` , by replacing `CHANGEME` with the license key, in the `.env` file fetched earlier.
 
-You can find a list of all available environment variables [on this Academy page](https://academy.jahia.com/documentation/system-administrator/dev-ops/docker/using-jcustomer-docker-image).
+You can find a list of all available environment variables [on this Academy page](https://academy.jahia.com/documentation/jahia-cms/jahia-8.2/dev-ops/docker/using-jcustomer-docker-image).
 
 ```bash
 JCUSTOMER_MAXMIND_GEOIP2_CITY_DATABASE_URL=https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=CHANGEME&suffix=tar.gz
@@ -29,21 +29,21 @@ ELASTICSEARCH_IMAGE=docker.elastic.co/elasticsearch/elasticsearch:7.17.14
 MARIADB_IMAGE=library/mariadb:10-focal
 ```
 
-You might have noticed that we're introducing another layer of flexibility with the `.env` file. You can use it to easily modify the docker images (and their versions) used for the environment. 
+You might have noticed that we're introducing another layer of flexibility with the `.env` file. You can use it to easily modify the docker images (and their versions) used for the environment.
 
 We can now start the environment:
+
 ```bash
-docker-compose up --renew-anon-volumes
+docker compose up --renew-anon-volumes
 ```
 
 ## After startup
 
-At the end of startup (give it a minute or two), open a browser to Digitall's home page at http://localhost:8080.
+At the end of startup (give it a minute or two), open a browser to Luxe's home page at http://localhost:8080.
 
 You can also validate that the connection between jExperience and Unomi is operating operational.
 
 <img width="800" alt="jExperience Settings" src="https://user-images.githubusercontent.com/5667028/113959331-a8827800-97f0-11eb-815c-0cff08874484.png">
-
 
 ## What did we learn ?
 
@@ -51,7 +51,7 @@ We added one level of complexity by adding another container (Unomi) requiring a
 
 This [provisioning script](./provisioning.yaml) uses one new commands when compared to the previous tutorial:
 
-* `editConfiguration` Create (or update) a configuration file in jahia `karaf/etc`.
+- `editConfiguration` Create (or update) a configuration file in jahia `karaf/etc`.
 
 ## That's it !
 

@@ -1,0 +1,7 @@
+mutation {
+  admin {
+    search {
+      addSite(siteKey: "luxe")
+    }
+  }
+}

@@ -1,0 +1,16 @@
+mutation {
+  jcr {
+    addNode(
+      parentPathOrId: "/sites/luxe/home"
+      name: "augmented-search"
+      primaryNodeType: "jnt:page"
+      mixins: ["jmix:seoHtmlHead"]
+      properties: [
+        { language: "en", name: "jcr:title", type: STRING, value: "Search" }
+        { name: "j:templateName", type: STRING, value: "free" }
+      ]
+    ) {
+      uuid
+    }
+  }
+}

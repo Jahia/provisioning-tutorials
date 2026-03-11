@@ -1,6 +1,6 @@
-version: '3.6'
 services:
   mariadb:
+    container_name: mariadb
     image: library/mariadb:10-focal
     deploy:
       resources:
@@ -15,18 +15,24 @@ services:
       MYSQL_USER: jahia
       MYSQL_PASSWORD: jahia
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.14
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:9.3.1
     environment:
       - discovery.type=single-node
+      - xpack.security.enabled=true
+      - ELASTIC_PASSWORD=password
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
     deploy:
       resources:
         limits:
-          memory: 2gb
+          memory: 3gb
     ports:
       - 9200:9200
     networks:
       stack:
   jahia:
+    container_name: jahia
     image: jahia/jahia-ee:8.2
     networks:
       - stack
@@ -45,8 +51,8 @@ services:
       DB_USER: jahia
       DB_PASS: jahia
       OPERATING_MODE: development
-      PROCESSING_SERVER: 'true'
+      PROCESSING_SERVER: "true"
       MAX_RAM_PERCENTAGE: 95
-      EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/provisioning.yaml'
+      EXECUTE_PROVISIONING_SCRIPT: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/provisioning.yaml"
 networks:
   stack:

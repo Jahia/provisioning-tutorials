@@ -1,24 +1,23 @@
-# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/home
-# You can also find some details here: https://github.com/Jahia/jahia-private/blob/master/bundles/provisioning/README.md
+# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/documentation/jahia-cms/jahia-8.2/dev-ops/provisioning/about-provisioning
 
 # Start with the provisioning script from Tutorial #3
 - include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/provisioning.yaml
 
-# Install and start bundles for Forms and jExperience
-- installBundle:
-  - 'mvn:org.jahia.modules/forms-core/3.15.0'
-  - 'mvn:org.jahia.modules/forms-extended-inputs/2.2.0'
-  - 'mvn:org.jahia.modules/forms-nocss-theme/2.1.0'
-  - 'mvn:org.jahia.modules/forms-prefill/2.1.0'
-  - 'mvn:org.jahia.modules/forms-snippets-extension/3.3.0'
-  - 'mvn:org.jahia.modules/jexperience/3.5.1'
-  - 'mvn:org.jahia.modules/jexperience-forms-bridge/3.0.0'
+# Install and start Modules for Forms and jExperience
+- installModule:
+    - "mvn:org.jahia.modules/forms-core/3.17.0"
+    - "mvn:org.jahia.modules/forms-extended-inputs/2.2.0"
+    - "mvn:org.jahia.modules/forms-nocss-theme/2.1.0"
+    - "mvn:org.jahia.modules/forms-prefill/2.1.0"
+    - "mvn:org.jahia.modules/forms-snippets-extension/3.3.0"
+    - "mvn:org.jahia.modules/jexperience/3.8.0"
+    - "mvn:org.jahia.modules/jexperience-forms-bridge/3.0.0"
   autoStart: true
   uninstallPreviousVersion: true
 
-# Enable jExperience on digitall
+# Enable jExperience on Luxe
 - enable: "jexperience"
-  site: "digitall"
+  site: "luxe"
 
 # Configure jExperience
 - editConfiguration: "org.jahia.modules.jexperience.settings"

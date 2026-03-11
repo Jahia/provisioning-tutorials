@@ -1,0 +1,9 @@
+mutation {
+  jcr(workspace: EDIT) {
+    mutateNode(
+      pathOrId: "/sites/luxe/home/augmented-search/main/augmented-search"
+    ) {
+      publish(languages: "en")
+    }
+  }
+}
