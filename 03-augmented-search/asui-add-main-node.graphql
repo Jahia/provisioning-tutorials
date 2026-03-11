@@ -1,0 +1,12 @@
+mutation {
+  jcr {
+    addNode(
+      parentPathOrId: "/sites/luxe/home/augmented-search"
+      name: "main"
+      primaryNodeType: "jnt:contentList"
+      mixins: ["jmix:isAreaList"]
+    ) {
+      uuid
+    }
+  }
+}

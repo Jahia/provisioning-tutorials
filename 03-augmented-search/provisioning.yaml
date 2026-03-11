@@ -36,11 +36,7 @@
 
 # Create a new menu entry in Luxe and add Augmented Search UI
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-add-page.graphql"
-- sleep: 2000
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-add-node.graphql"
-- sleep: 2000
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-add-node.graphql"
-- sleep: 2000
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-add-main-node.graphql"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-add-as-node.graphql"
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-publish-page.graphql"
-- sleep: 2000
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-publish-node.graphql"
