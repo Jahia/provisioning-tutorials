@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 services:
   mariadb:
     image: library/mariadb:10-focal
@@ -27,15 +27,15 @@ services:
         limits:
           memory: 4gb
     environment:
-      DB_VENDOR : mariadb
+      DB_VENDOR: mariadb
       DBMS_TYPE: mariadb
       DB_HOST: mariadb
       DB_NAME: jahia
       DB_USER: jahia
       DB_PASS: jahia
       OPERATING_MODE: development
-      PROCESSING_SERVER: 'true'
+      PROCESSING_SERVER: "true"
       MAX_RAM_PERCENTAGE: 95
-      EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/02-digitall-mariadb/provisioning.yaml'
+      EXECUTE_PROVISIONING_SCRIPT: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/02-luxe-mariadb/provisioning.yaml"
 networks:
   stack:

@@ -1,13 +1,13 @@
-# Digitall & MariaDB tutorial
+# luxe & MariaDB tutorial
 
 Building on top of the [previous tutorial](../01-personal-api-tokens), we're going to:
 
 - start Jahia Enterprise, single node
 - start a MariaDB container with an empty database
 - Link MariaDB and Jahia, then initialize the database
-- Install Digitall
+- Install Luxe
 
-The provisioning script is getting slightly more complex, as we need to install all the modules needed by Digitall.
+The provisioning script is getting slightly more complex, as we need to install all the modules needed by Luxe.
 
 We will also need use docker compose to spin-up the environment.
 
@@ -18,7 +18,7 @@ To get started, execute the following commands:
 ```bash
 cd ~
 git clone https://github.com/Jahia/provisioning-tutorials.git
-cd provisioning-tutorials/02-digitall-mariadb
+cd provisioning-tutorials/02-luxe-mariadb
 docker compose up --renew-anon-volumes
 ```
 
@@ -26,7 +26,7 @@ You will first see the MariaDB starting up, Jahia will then create the necessary
 
 ## After startup
 
-You will have a fully functional Digitall site when visiting http://localhost:8080
+You will have a fully functional Luxe site when visiting http://localhost:8080
 
 ## What did we learn ?
 
@@ -49,4 +49,4 @@ This [provisioning script](./provisioning.yaml) use a few new commands when comp
 
 ## Next
 
-In the next tutorial, we're going to add an Elasticsearch single-node cluster, install and configure Augmented Search and enable it on Digitall, [click here](../03-augmented-search/).
+In the next tutorial, we're going to add an Elasticsearch single-node cluster, install and configure Augmented Search and enable it on Luxe, [click here](../03-augmented-search/).
