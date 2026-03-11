@@ -1,4 +1,4 @@
-# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/home
+# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/documentation/jahia-cms/jahia-8.2/dev-ops/provisioning/about-provisioning
 
 # Start with the provisioning script from Tutorial #2
 - include: https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/02-luxe-mariadb/provisioning.yaml

@@ -1,4 +1,4 @@
-# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/home
+# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/documentation/jahia-cms/jahia-8.2/dev-ops/provisioning/about-provisioning
 
 # Create a token
 - executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-examples/main/01-personal-api-tokens/create-token.groovy"
