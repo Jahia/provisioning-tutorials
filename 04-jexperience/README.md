@@ -19,7 +19,7 @@ This tutorial is a bit more cumbersome when compared to the previous ones as it 
 
 Once done, update the variable `JCUSTOMER_MAXMIND_GEOIP2_CITY_DATABASE_URL` , by replacing `CHANGEME` with the license key, in the `.env` file fetched earlier.
 
-You can find a list of all available environment variables [on this Academy page](https://academy.jahia.com/documentation/system-administrator/dev-ops/docker/using-jcustomer-docker-image).
+You can find a list of all available environment variables [on this Academy page](https://academy.jahia.com/documentation/jahia-cms/jahia-8.2/dev-ops/docker/using-jcustomer-docker-image).
 
 ```bash
 JCUSTOMER_MAXMIND_GEOIP2_CITY_DATABASE_URL=https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&license_key=CHANGEME&suffix=tar.gz
@@ -34,7 +34,7 @@ You might have noticed that we're introducing another layer of flexibility with 
 We can now start the environment:
 
 ```bash
-docker-compose up --renew-anon-volumes
+docker compose up --renew-anon-volumes
 ```
 
 ## After startup

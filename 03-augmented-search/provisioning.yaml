@@ -8,18 +8,6 @@
 # So we're adding a new repository to be able to resolve these dependencies
 - addMavenRepository: "https://devtools.jahia.com/nexus/content/repositories/jahia-public-app-store/@id=JahiaStore"
 
-- installModule:
-    - "js:mvn:org.jahia.modules.javascript/luxe-jahia-demo/LATEST/tgz"
-  autoStart: true
-  uninstallPreviousVersion: true
-
-- installModule:
-    - "mvn:org.jahia.modules/luxe-prepackaged-website"
-  autoStart: true
-  uninstallPreviousVersion: true
-
-- importSite: "jar:mvn:org.jahia.modules/luxe-prepackaged-website/LATEST/zip/import!/luxe.zip"
-
 # Install and start Modules for Augmented Search
 - installModule:
     - "mvn:org.jahia.modules/augmented-search/4.0.0"
@@ -43,14 +31,12 @@
 - enable: "augmented-search-ui"
   site: "luxe"
 
-# Configure Augmented Search and Luxe
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-config.graphql"
+# Configure Augmented Search and Luxe and start indexation
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-add-luxe.graphql"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index-luxe.graphql"
 
-# Add Augmented-Search UI module below the slider in Luxe home
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/add-search-ui.graphql"
-
-# Publish Augmented-Search UI
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/publish-search-ui.graphql"
-
-# Trigger a full indexation
-- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/as-index.graphql"
+# Create a new menu entry in Luxe and add Augmented Search UI
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-add-page.graphql"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-add-node.graphql"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-publish-page.graphql"
+- executeScript: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/03-augmented-search/asui-publish-node.graphql"

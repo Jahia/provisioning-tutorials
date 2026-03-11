@@ -17,7 +17,7 @@ To get started, execute the following commands:
 cd ~
 git clone https://github.com/Jahia/provisioning-tutorials.git
 cd provisioning-tutorials/03-augmented-search
-docker-compose up --renew-anon-volumes -d
+docker compose up --renew-anon-volumes -d
 sleep 10
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-icu
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-stempel
@@ -30,9 +30,11 @@ While the elasticsearch cluster is starting, you will first see the MariaDB cont
 
 ## After startup
 
-At the end of startup (give it a minute or two), open a browser to Luxe's home page at http://localhost:8080.
+At the end of startup (give it a minute or two), open a browser to Luxe's home page at http://localhost:8080 and navigate to the "Search" menu.
 
-<img width="800" alt="Augmented Search and Luxe" src="https://user-images.githubusercontent.com/5667028/113905349-0dae7d00-97a1-11eb-9121-f68379f41bd1.png">
+<img width="800" alt="Augmented Search UI and Luxe" src="./as-in-luxe.png">
+
+You will see the Augmented Search UI on the page (note that this is not an exercise in style, but a demonstration of the provisioning functionality).
 
 ### Fiddling with GraphQL API
 
