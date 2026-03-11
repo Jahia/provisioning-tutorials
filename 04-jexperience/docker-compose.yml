@@ -1,5 +1,6 @@
 services:
   mariadb:
+    container_name: mariadb
     image: ${MARIADB_IMAGE}
     mem_limit: 2gb
     command: --max_allowed_packet=134217728 --transaction-isolation=READ-UNCOMMITTED --innodb-lock-wait-timeout=10
@@ -12,6 +13,7 @@ services:
       MYSQL_USER: jahia
       MYSQL_PASSWORD: jahia
   elasticsearch:
+    container_name: elasticsearch
     image: ${ELASTICSEARCH_IMAGE}
     networks:
       stack:
@@ -20,7 +22,7 @@ services:
       - discovery.type=single-node
       - cluster.name=jahia-es-cluster
       - xpack.security.enabled=true
-      - ELASTIC_PASSWORD=password
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
     ports:
@@ -30,6 +32,7 @@ services:
         limits:
           memory: 3gb
   jahia:
+    container_name: jahia
     image: ${JAHIA_IMAGE}
     depends_on:
       - mariadb
@@ -50,6 +53,7 @@ services:
       MAX_RAM_PERCENTAGE: 95
       EXECUTE_PROVISIONING_SCRIPT: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/04-jexperience/provisioning.yaml"
   jcustomer:
+    container_name: jcustomer
     image: ${UNOMI_IMAGE}
     networks:
       stack:
@@ -62,7 +66,7 @@ services:
       - UNOMI_THIRDPARTY_PROVIDER1_IPADDRESSES=172.16.1.30
       - UNOMI_THIRDPARTY_PROVIDER1_ALLOWEDEVENTS=login,updateProperties
       - UNOMI_ELASTICSEARCH_USERNAME=elastic
-      - UNOMI_ELASTICSEARCH_PASSWORD=password
+      - UNOMI_ELASTICSEARCH_PASSWORD=${ELASTIC_PASSWORD}
       - JAVA_MAX_MEM=2G
       - UNOMI_ROOT_PASSWORD=karaf
       - UNOMI_HAZELCAST_TCPIP_MEMBERS=jcustomer
