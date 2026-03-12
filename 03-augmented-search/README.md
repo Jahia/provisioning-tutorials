@@ -16,7 +16,7 @@ To get started, execute the following commands:
 ```bash
 cd ~
 git clone https://github.com/Jahia/provisioning-tutorials.git
-cd provisioning-tutorials/03-augmented-search
+cd ./provisioning-tutorials/03-augmented-search
 docker compose up --renew-anon-volumes -d
 sleep 10
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-icu
