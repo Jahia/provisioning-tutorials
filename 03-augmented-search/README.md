@@ -17,13 +17,13 @@ To get started, execute the following commands:
 cd ~
 git clone https://github.com/Jahia/provisioning-tutorials.git
 cd ./provisioning-tutorials/03-augmented-search
-docker compose up --renew-anon-volumes -d
-sleep 10
+docker compose up --renew-anon-volumes -d elasticsearch
+sleep 5
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-icu
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-stempel
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-kuromoji
 docker compose restart elasticsearch
-docker logs -f jahia
+docker compose up
 ```
 
 While the elasticsearch cluster is starting, you will first see the MariaDB container booting up and Jahia creating the necessary tables and continue with its startup.
