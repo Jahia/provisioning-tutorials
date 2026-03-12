@@ -1,0 +1,9 @@
+{
+  "cluster": ["manage"],
+  "indices": [
+    {
+      "names": ["*"],
+      "privileges": ["read", "manage", "write"]
+    }
+  ]
+}
