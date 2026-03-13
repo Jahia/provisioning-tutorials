@@ -16,21 +16,30 @@ To get started, execute the following commands:
 ```bash
 cd ~
 git clone https://github.com/Jahia/provisioning-tutorials.git
-cd provisioning-tutorials/03-augmented-search
-docker compose up --renew-anon-volumes -d
-sleep 10
+cd ./provisioning-tutorials/03-augmented-search
+
+# Start ElasticSearch container
+docker compose up --renew-anon-volumes --wait elasticsearch
+
+# Install required plugins for ElasticSearch
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-icu
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-stempel
 docker exec --tty elasticsearch /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-kuromoji
+
+# Restart ElasticSearch container (required after plugins installation)
 docker compose restart elasticsearch
+
+# Start other docker-compose services; wait for services healthcheck to complete
+docker compose up --wait
+
+# Watch out Jahia log
 docker logs -f jahia
 ```
-
-While the elasticsearch cluster is starting, you will first see the MariaDB container booting up and Jahia creating the necessary tables and continue with its startup.
+Here during the last steps, MariaDB and Elasticsearch containers will be started first, and once their healthchecks report a successful status, Jahia will start booting up. It might take a while for the docker-compose project to be ready due to the many provisioning and indexing operations being performed.
 
 ## After startup
 
-At the end of startup (give it a minute or two), open a browser to Luxe's home page at http://localhost:8080 and navigate to the "Search" menu.
+At the end of startup (*give it a minute or two for the reindexing to complete*), open a browser to Luxe's home page at http://localhost:8080 and navigate to the "Search" menu.
 
 <img width="800" alt="Augmented Search UI and Luxe" src="./as-in-luxe.png">
 

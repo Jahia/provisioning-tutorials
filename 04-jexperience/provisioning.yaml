@@ -5,8 +5,9 @@
 
 # Install and start Modules for Forms and jExperience
 - installModule:
+    - "mvn:org.jahia.modules/font-awesome/6.1.5"
     - "mvn:org.jahia.modules/forms-core/3.17.0"
-    - "mvn:org.jahia.modules/forms-extended-inputs/2.2.0"
+    - "mvn:org.jahia.modules/forms-extended-inputs/2.3.0"
     - "mvn:org.jahia.modules/forms-nocss-theme/2.1.0"
     - "mvn:org.jahia.modules/forms-prefill/2.1.0"
     - "mvn:org.jahia.modules/forms-snippets-extension/3.3.0"
