@@ -12,6 +12,12 @@ services:
       MYSQL_DATABASE: jahia
       MYSQL_USER: jahia
       MYSQL_PASSWORD: jahia
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
   elasticsearch:
     container_name: elasticsearch
     image: ${ELASTICSEARCH_IMAGE}
@@ -25,6 +31,12 @@ services:
       - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -k -u elastic:$$ELASTIC_PASSWORD 'http://localhost:9200/_cluster/health?wait_for_status=green&timeout=5s' || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 30
+      start_period: 60s
     ports:
       - 9200:9200
     deploy:
@@ -35,7 +47,12 @@ services:
     container_name: jahia
     image: ${JAHIA_IMAGE}
     depends_on:
-      - mariadb
+      mariadb:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+      jcustomer:
+        condition: service_healthy
     ports:
       - 8080:8080
     mem_limit: 8gb
@@ -52,6 +69,12 @@ services:
       PROCESSING_SERVER: "true"
       MAX_RAM_PERCENTAGE: 95
       EXECUTE_PROVISIONING_SCRIPT: "https://raw.githubusercontent.com/Jahia/provisioning-tutorials/main/04-jexperience/provisioning.yaml"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -k 'http://localhost:8080/start' || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 60
+      start_period: 600s
   jcustomer:
     container_name: jcustomer
     image: ${UNOMI_IMAGE}
@@ -75,8 +98,14 @@ services:
       - 9443:9443
       - 8181:8181
       - 8102:8102
+    healthcheck:
+      test: ["CMD-SHELL", "curl -k -u karaf:$$UNOMI_ROOT_PASSWORD 'http://localhost:8181/cxs/cluster' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
     depends_on:
-      - elasticsearch
+      elasticsearch:
+        condition: service_healthy
 networks:
   stack:
     driver: bridge

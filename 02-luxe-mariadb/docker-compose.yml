@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   mariadb:
     image: library/mariadb:10-focal

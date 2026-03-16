@@ -18,7 +18,7 @@ To get started, execute the following commands:
 ```bash
 cd ~
 git clone https://github.com/Jahia/provisioning-tutorials.git
-cd provisioning-tutorials/02-luxe-mariadb
+cd ./provisioning-tutorials/02-luxe-mariadb
 docker compose up --renew-anon-volumes
 ```
 
